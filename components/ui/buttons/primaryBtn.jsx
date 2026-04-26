@@ -1,30 +1,53 @@
 import Link from "next/link";
 import React from "react";
 
-const primaryBtn = ({ btnText, onClick, href, custom, type, disabled }) => {
-  // If type is "submit" or "button", render a button element
+// Theme colors — change here to retheme
+const theme = {
+  bg:          "bg-[#e8643a]",
+  bgHover:     "hover:bg-[#f7875b]",
+  bgDisabled:  "disabled:bg-gray-400",
+  text:        "text-[#1a0a04]",
+  textHover:   "hover:text-[#1a0a04]",
+};
+
+const sharedClasses = `
+  cursor-pointer font-serif font-extralight text-[12px]
+  rounded-full px-8 transition-all ease-in-out duration-300
+  min-w-[90%] md:min-w-[220px] min-h-[50px]
+  flex items-center justify-center
+  relative overflow-hidden
+  btn-primary btn-press
+`;
+
+const PrimaryBtn = ({ btnText, onClick, href, custom, type, disabled }) => {
+  const colorClasses = `
+    ${theme.bg} ${theme.bgHover} ${theme.text} ${theme.textHover}
+    ${disabled ? theme.bgDisabled : ""}
+  `;
+
   if (type === "submit" || type === "button") {
     return (
       <button
         type={type}
         onClick={onClick}
         disabled={disabled}
-        className={`${custom} cursor-pointer font-serif font-extralight text-[12px] bg-primary hover:bg-[#f7875b] disabled:bg-gray-400 disabled:cursor-not-allowed text-secondary rounded-full px-8 transition-all ease-in-out duration-300 min-w-[90%] md:min-w-[220px] min-h-[50px] flex items-center justify-center`}
+        className={`${sharedClasses} ${colorClasses} ${custom} disabled:cursor-not-allowed`}
       >
-        {btnText}
+        <div className="shimmer" />
+        <span className="relative z-10">{btnText}</span>
       </button>
     );
   }
 
-  // Otherwise render as Link
   return (
     <Link
       href={href || "/"}
-      className={`${custom} cursor-pointer font-serif font-extralight text-[12px] bg-primary hover:bg-[#f7875b] text-secondary rounded-full px-8 transition-all ease-in-out duration-300 min-w-[90%] md:min-w-[220px] min-h-[50px] flex items-center justify-center`}
+      className={`${sharedClasses} ${colorClasses} ${custom}`}
     >
-      {btnText}
+      <div className="shimmer" />
+      <span className="relative z-10">{btnText}</span>
     </Link>
   );
 };
 
-export default primaryBtn;
+export default PrimaryBtn;

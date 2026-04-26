@@ -119,8 +119,8 @@ const Services = () => {
   return (
     <section
       ref={ref}
-      className="py-8 px-6 sm:px-8 lg:py-12 lg:px-16 2xl:px-35"
-      style={{ boxShadow: "inset 0 50px 40px -10px #facdbe" }}
+      className="bg-gradient-to-b from-[#f3b19c] to-[#c3b7b3] py-8 px-6 sm:px-8 lg:py-12 lg:px-16 2xl:px-35"
+      style={{ boxShadow: "inset 0 60px 50px -10px #facdbe" }}
     >
       {/* Header with fade-in animation */}
       <div className={`flex flex-col items-center gap-4 mb-8 md:mb-10 transition-all duration-700 ease-out
@@ -158,3 +158,5 @@ const Services = () => {
 };
 
 export default Services;
+
+	// style={{ boxShadow: "inset 0 50px 40px -10px #facdbe" }}

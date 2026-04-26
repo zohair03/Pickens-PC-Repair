@@ -102,26 +102,23 @@ const Navbar = () => {
   return (
     <nav>
       <div className="fixed top-0 z-50 w-full font-sans" ref={navbarRef}>
-        {/* Top Bar */}
+
         <TopBar />
 
         {/* Main Navbar */}
         <div
-          className="2xl:px-30 relative flex justify-between items-center bg-black/40 backdrop-blur-xl px-4 md:px-8 py-4 md:py-5"
+          className="relative flex justify-between items-center px-4 md:px-8 2xl:px-30 py-3 md:py-4 bg-black/40 backdrop-blur-2xl border-b-1  border-[#ffffff1a]"
           onMouseLeave={closeMega}
         >
           {/* Logo */}
-          <div>
-            <Link
-              href="/"
-              className="font-semibold text-3xl md:text-4xl xl:text-3xl 2xl:text-5xl"
-            >
+          <div className="shrink-0 transition-[filter] duration-300 hover:drop-shadow-[0_0_12px_rgba(247,109,54,0.35)]">
+            <Link href="/">
               <Image
                 src="/images/logo.png"
                 alt="Company Logo"
                 width={200}
                 height={200}
-                className=""
+                className="h-auto w-[140px] md:w-[180px]"
               />
             </Link>
           </div>
@@ -136,20 +133,20 @@ const Navbar = () => {
 
           {/* Hamburger Button */}
           <button
-            className="lg:hidden text-white flex flex-col gap-1.5 p-2"
+            className="lg:hidden flex flex-col gap-[5px] p-2 cursor-pointer bg-transparent border border-white/10 rounded-md transition-all duration-250 hover:border-primary/40 hover:shadow-[0_0_12px_rgba(247,109,54,0.15)]"
             onClick={() => (menuOpen ? closeMenu() : openMenu())}
             aria-label={menuOpen ? "Close menu" : "Open menu"}
             aria-expanded={menuOpen}
             aria-controls="mobile-menu"
           >
             <span
-              className={`block w-6 h-0.5 bg-white transition-all duration-300 ${menuOpen ? "rotate-45 translate-y-2" : ""}`}
+              className={`block w-[22px] h-0.5 bg-white/85 rounded-sm transition-all duration-300 ${menuOpen ? "rotate-45 translate-y-2" : ""}`}
             />
             <span
-              className={`block w-6 h-0.5 bg-white transition-all duration-300 ${menuOpen ? "opacity-0" : ""}`}
+              className={`block w-[22px] h-0.5 bg-white/85 rounded-sm transition-all duration-300 ${menuOpen ? "opacity-0" : ""}`}
             />
             <span
-              className={`block w-6 h-0.5 bg-white transition-all duration-300 ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`}
+              className={`block w-[22px] h-0.5 bg-white/85 rounded-sm transition-all duration-300 ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`}
             />
           </button>
         </div>

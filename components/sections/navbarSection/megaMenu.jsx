@@ -28,7 +28,7 @@ const MegaMenu = ({ items, isClosing, navbarBottom, onMouseEnter, onMouseLeave }
   return createPortal(
     <div
       style={{ top: navbarBottom }}
-      className={`fixed left-0 w-full z-[999] bg-black/40 backdrop-blur-xl border-t border-white/10 shadow-2xl ${
+      className={`fixed left-0 w-full z-[999] bg-black/40 backdrop-blur-xl border-b-1  border-[#ffffff1a] shadow-2xl ${
         isClosing ? "animate-slideUp" : "animate-slideDown"
       }`}
       onMouseEnter={onMouseEnter}

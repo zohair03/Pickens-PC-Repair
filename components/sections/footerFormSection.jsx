@@ -29,7 +29,7 @@ const contactInfo = [
 
 const FooterForm = () => {
   return (
-    <section className="flex flex-col lg:flex-row gap-6 bg-gray-50 py-8 px-5 md:py-12 md:px-8 lg:py-12 lg:px-16 2xl:px-35 2xl:py-15">
+    <section className="bg-[#e4c2a4] bg-[url('/images/why-bg.webp')] bg-cover flex flex-col lg:flex-row gap-6 py-8 px-5 md:py-12 md:px-8 lg:py-12 lg:px-16 2xl:px-35 2xl:py-15">
       {/* Left - Contact Info */}
       <div className="flex flex-col gap-5 items-start w-full lg:w-1/2 rounded-2xl shadow-md p-6 md:p-10 bg-white border border-color">
         <div className="flex flex-col gap-3">

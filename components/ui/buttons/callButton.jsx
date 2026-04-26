@@ -4,8 +4,31 @@ import Image from "next/image";
 
 const PHONE_NUMBER = "+91 9535216410";
 
-const CallButton = ({btnText, custom}) => {
+// Theme colors — change here to retheme
+const theme = {
+  bg:          "bg-[#e8643a]",
+  bgHover:     "hover:bg-[#f7875b]",
+  bgDisabled:  "disabled:bg-gray-400",
+  text:        "text-[#1a0a04]",
+  textHover:   "hover:text-[#1a0a04]",
+};
+
+const sharedClasses = `
+  cursor-pointer font-serif font-extralight text-[12px]
+  rounded-full px-8 transition-all ease-in-out duration-300
+  min-w-[90%] md:min-w-[220px] min-h-[50px]
+  flex items-center justify-center
+  relative overflow-hidden
+  btn-primary btn-press
+`;
+
+const CallButton = ({btnText, custom, disabled}) => {
   const [showNumber, setShowNumber] = useState(false);
+
+  const colorClasses = `
+    ${theme.bg} ${theme.bgHover} ${theme.text} ${theme.textHover}
+    ${disabled ? theme.bgDisabled : ""}
+  `;
 
   const handleClick = () => {
     setShowNumber(!showNumber);
@@ -16,7 +39,8 @@ const CallButton = ({btnText, custom}) => {
       {/* Desktop - toggle number on click */}
       <button
         onClick={handleClick}
-        className={`${custom ? custom : ""} w-[240px] cursor-pointer font-serif  font-extralight text-[12px] bg-primary hover:bg-[#f7875b] text-secondary rounded-full px-8 transition-all ease-in-out duration-300 min-w-[220px] min-h-[50px] hidden sm:flex items-center justify-center gap-2`}
+        disabled={disabled}
+        className={`${custom ? custom : ""} ${sharedClasses} ${colorClasses} w-[240px] px-8 transition-all ease-in-out duration-300 min-w-[220px] min-h-[50px] hidden sm:flex items-center justify-center gap-2`}
       >
         <Image
           src="/icons/call.svg"
@@ -24,13 +48,14 @@ const CallButton = ({btnText, custom}) => {
           width={20}
           height={20}
         />
+        <div className="shimmer" />
         {showNumber ? PHONE_NUMBER : btnText}
       </button>
 
       {/* Mobile - direct phone call */}
       <a
         href={`tel:${PHONE_NUMBER.replace(/-/g, "")}`}
-        className={`${custom} w-[214px] font-serif  font-extralight text-[12px] bg-primary hover:bg-[#f7875b] text-secondary rounded-full px-8 transition-all ease-in-out duration-300 min-w-[90%]  min-h-[50px] sm:hidden flex items-center justify-center gap-2`}
+        className={`${custom} ${sharedClasses} ${colorClasses} w-[214px] px-8 transition-all ease-in-out duration-300 min-w-[90%]  min-h-[50px] sm:hidden flex items-center justify-center gap-2`}
       >
         <Image
           src="/icons/call.svg"
@@ -38,6 +63,7 @@ const CallButton = ({btnText, custom}) => {
           width={20}
           height={20}
         />
+        <div className="shimmer" />
         {btnText}
       </a>
     </>

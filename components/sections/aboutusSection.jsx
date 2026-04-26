@@ -3,7 +3,7 @@ import PrimaryBtn from "../ui/buttons/primaryBtn";
 
 const AboutUs = () => {
   return (
-    <section className="bg-section-bg py-8 px-6 sm:px-12 lg:px-16 lg:py-12 xl:px-30 2xl:px-50">
+    <section className="bg-gradient-to-b from-[#c3b7b3] to-[#d1d5db] py-8 px-6 sm:px-12 lg:px-16 lg:py-12 xl:px-30 2xl:px-50">
       <div className="flex flex-col gap-12 lg:gap-10 items-center">
         {/* Header */}
         <div className="flex flex-col gap-2 text-center items-center w-full">
