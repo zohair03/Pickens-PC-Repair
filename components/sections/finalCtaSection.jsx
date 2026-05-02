@@ -3,6 +3,9 @@ import React, { useState, useEffect } from "react";
 import SecondaryBtn from "../ui/buttons/secondaryBtn";
 import CallButton from "../ui/buttons/callButton";
 import { useInView } from "react-intersection-observer";
+import Label from "../ui/texts/Label";
+import FinalCtaH2 from "../ui/texts/FinalCtaH2";
+import FinalCtaSubtitle from "../ui/texts/FinalCtaSubtitle";
 
 const FinalCta = ({
   label = "Get In Touch",
@@ -16,6 +19,7 @@ const FinalCta = ({
   height = "min-sm:h-[70vh]",
   headingFontSize,
 }) => {
+  
   const [isMounted, setIsMounted] = useState(false);
   const { ref, inView } = useInView({
     threshold: 0.1,
@@ -50,17 +54,9 @@ const FinalCta = ({
           className={`flex flex-col lg:gap-4 text-center items-center transition-all duration-700 ease-out
             ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}
         >
-          <p className="label font-semibold text-white text-sm md:text-base mb-1 xl:mb-[-10px] 2xl:mb-[10px]">
-            {label}
-          </p>
-          <h2
-            className={`text-white max-[380px]:text-xl text-h2 md:text-3xl lg:text-5xl xl:text-4xl 2xl:text-5xl font-serif sm:text-3xl text-center max-[380px]:leading-10 leading-14 lg:leading-22 xl:leading-16 2xl:leading-22 ${headingFontSize}`}
-          >
-            {title}
-          </h2>
-          <p className="mt-2 xl:mt-2 text-center font-sans font-semibold max-[380px]:text-sm text-base md:text-lg lg:text-2xl xl:text-xl 2xl:text-2xl max-[380px]:w-full w-[90%] md:w-auto xl:w-[80%] text-white/80">
-            {subtitle}
-          </p>
+          <Label label={label} custom="text-white mb-[-12px]" />
+          <FinalCtaH2 text={title} custom={`${headingFontSize}`} />
+          <FinalCtaSubtitle text={subtitle} />
         </div>
 
         {/* Buttons */}

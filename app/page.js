@@ -25,8 +25,7 @@ const faqs = [
   {
     id: 3,
     question: "Where is your physical office located?",
-    answer:
-      "We are located at Jaraganahalli Grama Main Road, Bengaluru.",
+    answer: "We are located at Jaraganahalli Grama Main Road, Bengaluru.",
   },
   {
     id: 4,
@@ -45,7 +44,7 @@ export default function Home() {
       <AboutUs />
       <WhyChooseUs />
       <Reviews />
-      <Faqs faqs={faqs}/>
+      <Faqs faqs={faqs} />
       <FinalCta />
     </main>
   );

@@ -1,17 +1,17 @@
 import Image from "next/image";
 import PrimaryBtn from "../ui/buttons/primaryBtn";
+import Label from "../ui/texts/Label";
+import H2 from "../ui/texts/H2";
 
 const AboutUs = () => {
   return (
-    <section className="bg-gradient-to-b from-[#c3b7b3] to-[#d1d5db] py-8 px-6 sm:px-12 lg:px-16 lg:py-12 xl:px-30 2xl:px-50">
+    <section className="py-8 px-6 sm:px-12 lg:px-16 lg:py-12 xl:px-30 2xl:px-50">
       <div className="flex flex-col gap-12 lg:gap-10 items-center">
         {/* Header */}
         <div className="flex flex-col gap-2 text-center items-center w-full">
           <div className="flex flex-col gap-2">
-            <p className="label font-semibold">Who We Are</p>
-            <h2 className="max-[380px]:text-2xl text-h2 font-serif sm:text-3xl md:text-3xl lg:text-4xl normal-case">
-              The Journey of RN Infotech
-            </h2>
+            <Label label="Who We Are" />
+            <H2 text="The Journey of RN Infotech" />
           </div>
         </div>
 
