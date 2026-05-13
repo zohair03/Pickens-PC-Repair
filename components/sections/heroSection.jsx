@@ -42,7 +42,7 @@ const Hero = () => {
                 ${isMounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}
           style={{ transitionDelay: "400ms" }}
         >
-          <PrimaryBtn href="/" btnText="View Services" />
+          <PrimaryBtn href="/" btnText="View Services" custom="text-white" />
           <SecondaryBtn
             href="/"
             custom="border border-light-blue"

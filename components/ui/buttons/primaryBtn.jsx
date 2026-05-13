@@ -6,8 +6,8 @@ const theme = {
   bg:          "liquid-glass-strong-light",
   bgHover:     "liquid-glass-strong-light",
   bgDisabled:  "disabled:bg-gray-400",
-  text:        "text-white",
-  textHover:   "hover:text-white",
+  text:        "text-black",
+  textHover:   "hover:text-black",
 };
 
 const sharedClasses = `
