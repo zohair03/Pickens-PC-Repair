@@ -46,8 +46,20 @@ const Faqs = ({ image = "/images/rn-infotech-55.webp", faqs = [], label = "? FAQ
   }
 
   return (
-    <section ref={ref} className="max-[380px]:px-5 p-8 lg:py-12 lg:px-16 2xl:px-50">
-      <div className="flex flex-col gap-8 md:gap-12 items-center">
+    <section ref={ref} className="relative overflow-hidden max-[380px]:px-5 p-8 lg:py-12 lg:px-16 2xl:px-50"
+      style={{
+        background: 'linear-gradient(180deg, #ffffff 0%, #fdf8f5 30%, #faf3ee 50%, #fdf8f5 70%, #ffffff 100%)',
+      }}
+    >
+      {/* Decorative blob */}
+      <div className="absolute top-[25%] left-[5%] w-[220px] h-[220px] rounded-full opacity-20 pointer-events-none"
+        style={{
+          background: 'radial-gradient(circle, rgba(247, 109, 54, 0.1) 0%, transparent 70%)',
+          filter: 'blur(60px)',
+        }}
+      />
+
+      <div className="relative z-10 flex flex-col gap-8 md:gap-12 items-center">
 
         <div
           className={`flex flex-col gap-2 text-center items-center transition-all duration-700 ease-out
@@ -59,7 +71,7 @@ const Faqs = ({ image = "/images/rn-infotech-55.webp", faqs = [], label = "? FAQ
 
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 w-full items-start">
 
-          <div className="w-full lg:w-1/2">
+          <div className="w-full lg:w-1/2 flex flex-col gap-1">
             {faqs.map((faq, index) => (
               <FaqItem
                 key={faq.id}
@@ -76,7 +88,12 @@ const Faqs = ({ image = "/images/rn-infotech-55.webp", faqs = [], label = "? FAQ
             className={`hidden lg:block w-full lg:w-1/2 transition-all duration-700 ease-out delay-500
               ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
           >
-            <div className="relative w-full h-[480px] rounded-2xl overflow-hidden">
+            <div className="relative w-full h-[480px] rounded-2xl overflow-hidden"
+              style={{
+                boxShadow: '0 16px 48px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.3)',
+                border: '2px solid rgba(255, 255, 255, 0.4)',
+              }}
+            >
               <Image
                 src={image}
                 alt="FAQ Image"

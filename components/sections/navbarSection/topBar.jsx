@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const TopBar = () => {
   return (
-    <div className="bg-black/40 backdrop-blur-2xl border-b-1  border-[#ffffff1a] flex justify-between items-center py-1.5 px-4 md:px-8 2xl:px-30  text-[0.75rem] text-white/75 relative">
+    <div className="flex justify-between items-center pt-3 px-4 md:px-8 2xl:px-30  text-[0.75rem] text-white/75 relative">
       {/* Subtle bottom glow line */}
       {/* <div
         className="absolute bottom-0 left-[10%] right-[10%] h-px pointer-events-none"
@@ -15,7 +15,7 @@ const TopBar = () => {
       /> */}
 
       {/* Left group: Reviews + Phone */}
-      <div className="flex items-center gap-1.5">
+      <div className="liquid-glass-strong-light rounded-full py-1 px-3 flex items-center gap-1.5">
         {/* Rating */}
         <div className="flex items-center gap-1">
           <span className="font-bold text-base text-white tracking-tight">
@@ -44,7 +44,7 @@ const TopBar = () => {
       </div>
 
       {/* Right group: Location */}
-      <div className="flex items-center">
+      <div className="liquid-glass-strong-light rounded-full py-1 px-3 flex items-center">
         <Link
           href="https://www.google.com/maps/place/Lamington+Rd,+Mumbai,+Maharashtra/@18.9623965,72.8152546,17z"
           target="_blank"

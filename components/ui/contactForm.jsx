@@ -5,12 +5,13 @@ import PrimaryBtn from "./buttons/primaryBtn";
 // Success Icon Component
 const SuccessIcon = () => (
   <svg
-    className="w-6 h-6 text-green-600"
+    className="w-6 h-6 text-green-400"
     fill="none"
     stroke="currentColor"
     viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
-  >n    <path
+  >
+    <path
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={2}
@@ -22,7 +23,7 @@ const SuccessIcon = () => (
 // Error Icon Component
 const ErrorIcon = () => (
   <svg
-    className="w-6 h-6 text-red-600"
+    className="w-6 h-6 text-red-400"
     fill="none"
     stroke="currentColor"
     viewBox="0 0 24 24"
@@ -61,7 +62,7 @@ const LoadingSpinner = () => (
   </svg>
 );
 
-const ContactForm = () => {
+const ContactForm = ({ isGlass = false }) => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -120,13 +121,42 @@ const ContactForm = () => {
     }
   };
 
+  // Input classes based on glass mode
+  const inputBaseClasses = isGlass
+    ? "glass-input rounded-md p-3 md:p-4 text-base md:text-lg font-medium outline-none"
+    : "border rounded-md p-3 md:p-4 text-base md:text-lg font-medium placeholder-[#2d3a4a] outline-none transition-all duration-300";
+
+  const getInputErrorClasses = (fieldName) => {
+    if (isGlass) return inputBaseClasses;
+    
+    if (fieldName === "email") {
+      return `${inputBaseClasses} ${
+        status.type === "error" && !formData.email
+          ? "border-red-400 focus:border-red-500 bg-red-50"
+          : status.type === "error" && formData.email && !validateEmail(formData.email)
+          ? "border-red-400 focus:border-red-500 bg-red-50"
+          : "border-[#9aa1ad] focus:border-primary"
+      }`;
+    }
+    
+    return `${inputBaseClasses} ${
+      status.type === "error" && !formData[fieldName]
+        ? "border-red-400 focus:border-red-500 bg-red-50"
+        : "border-[#9aa1ad] focus:border-primary"
+    }`;
+  };
+
   return (
     <form onSubmit={handleSubmit} className="flex flex-col gap-3 md:gap-4 w-full">
       {/* Status Message */}
       {status.message && (
         <div
           className={`flex items-center gap-3 p-4 rounded-lg border-l-4 animate-slideIn ${
-            status.type === "success"
+            isGlass
+              ? status.type === "success"
+                ? "bg-green-500/20 border-green-400 text-green-300"
+                : "bg-red-500/20 border-red-400 text-red-300"
+              : status.type === "success"
               ? "bg-green-50 border-green-500 text-green-800"
               : "bg-red-50 border-red-500 text-red-800"
           }`}
@@ -143,11 +173,7 @@ const ContactForm = () => {
         placeholder="*Name:"
         value={formData.name}
         onChange={handleChange}
-        className={`w-full border rounded-md p-3 md:p-4 text-base md:text-lg font-medium placeholder-[#2d3a4a] outline-none transition-all duration-300 ${
-          status.type === "error" && !formData.name
-            ? "border-red-400 focus:border-red-500 bg-red-50"
-            : "border-[#9aa1ad] focus:border-primary"
-        }`}
+        className={`w-full ${getInputErrorClasses("name")}`}
       />
 
       {/* Email & Phone */}
@@ -158,13 +184,7 @@ const ContactForm = () => {
           placeholder="*Email:"
           value={formData.email}
           onChange={handleChange}
-          className={`w-full sm:w-1/2 border rounded-md p-3 md:p-4 text-base md:text-lg font-medium placeholder-[#2d3a4a] outline-none transition-all duration-300 ${
-            status.type === "error" && !formData.email
-              ? "border-red-400 focus:border-red-500 bg-red-50"
-              : status.type === "error" && formData.email && !validateEmail(formData.email)
-              ? "border-red-400 focus:border-red-500 bg-red-50"
-              : "border-[#9aa1ad] focus:border-primary"
-          }`}
+          className={`w-full sm:w-1/2 ${getInputErrorClasses("email")}`}
         />
         <input
           type="tel"
@@ -172,11 +192,7 @@ const ContactForm = () => {
           placeholder="*Phone:"
           value={formData.phone}
           onChange={handleChange}
-          className={`w-full sm:w-1/2 border rounded-md p-3 md:p-4 text-base md:text-lg font-medium placeholder-[#2d3a4a] outline-none transition-all duration-300 ${
-            status.type === "error" && !formData.phone
-              ? "border-red-400 focus:border-red-500 bg-red-50"
-              : "border-[#9aa1ad] focus:border-primary"
-          }`}
+          className={`w-full sm:w-1/2 ${getInputErrorClasses("phone")}`}
         />
       </div>
 
@@ -187,11 +203,7 @@ const ContactForm = () => {
         value={formData.message}
         onChange={handleChange}
         rows={5}
-        className={`w-full border rounded-md p-3 md:p-4 text-base md:text-lg font-medium placeholder-[#2d3a4a] outline-none transition-all duration-300 resize-none ${
-          status.type === "error" && !formData.message
-            ? "border-red-400 focus:border-red-500 bg-red-50"
-            : "border-[#9aa1ad] focus:border-primary"
-        }`}
+        className={`w-full ${getInputErrorClasses("message")} resize-none`}
       />
 
       {/* Button */}

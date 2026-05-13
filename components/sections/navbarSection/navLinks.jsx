@@ -4,10 +4,10 @@ import MegaMenu from "./megaMenu";
 
 const NavLinks = ({ activeMega, setActiveMega }) => {
   return (
-    <div className="hidden lg:flex justify-center items-center gap-8">
+    <div className="liquid-glass-strong-light rounded-full px-5 py-3 flex hidden lg:flex justify-center items-center gap-8">
       <Link
         href="/"
-        className="relative text-white/85 font-semibold text-[0.85rem] tracking-widest no-underline py-1 transition-colors duration-250 hover:text-white group"
+        className="relative text-white/85 font-extrabold text-[0.85rem] tracking-widest no-underline py-1 transition-colors duration-250 hover:text-white group"
       >
         HOME
         <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-primary rounded-sm transition-all duration-300 shadow-[0_0_6px_rgba(247,109,54,0.4)] group-hover:w-full group-hover:left-0" />
@@ -20,7 +20,7 @@ const NavLinks = ({ activeMega, setActiveMega }) => {
       >
         <Link
           href="/"
-          className="relative text-white/85 font-semibold text-[0.85rem] tracking-widest no-underline py-1 transition-colors duration-250 hover:text-white"
+          className="relative text-white/85 font-extrabold text-[0.85rem] tracking-widest no-underline py-1 transition-colors duration-250 hover:text-white"
         >
           ABOUT
           <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-primary rounded-sm transition-all duration-300 shadow-[0_0_6px_rgba(247,109,54,0.4)] group-hover:w-full group-hover:left-0" />
@@ -47,7 +47,7 @@ const NavLinks = ({ activeMega, setActiveMega }) => {
       >
         <Link
           href="/"
-          className="relative text-white/85 font-semibold text-[0.85rem] tracking-widest no-underline py-1 transition-colors duration-250 hover:text-white"
+          className="relative text-white/85 font-extrabold text-[0.85rem] tracking-widest no-underline py-1 transition-colors duration-250 hover:text-white"
         >
           SERVICES
           <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-primary rounded-sm transition-all duration-300 shadow-[0_0_6px_rgba(247,109,54,0.4)] group-hover:w-full group-hover:left-0" />
@@ -69,7 +69,7 @@ const NavLinks = ({ activeMega, setActiveMega }) => {
 
       <Link
         href="/"
-        className="relative text-white/85 font-semibold text-[0.85rem] tracking-widest no-underline py-1 transition-colors duration-250 hover:text-white group"
+        className="relative text-white/85 font-extrabold text-[0.85rem] tracking-widest no-underline py-1 transition-colors duration-250 hover:text-white group"
       >
         CONTACT
         <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-primary rounded-sm transition-all duration-300 shadow-[0_0_6px_rgba(247,109,54,0.4)] group-hover:w-full group-hover:left-0" />

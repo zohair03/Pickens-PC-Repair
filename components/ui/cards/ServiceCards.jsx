@@ -8,11 +8,12 @@ const ServiceCards = ({ service, index, isVisible }) => {
 
   return (
     <div
-      className={`transition-transform duration-400 hover:-translate-y-2 hover:shadow-xl group relative transition-all duration-700 ease-out transform max-[380px]:h-[350px] h-[420px] rounded-2xl overflow-hidden shadow-xl
+      className={`transition-transform duration-400 hover:-translate-y-2 group relative transition-all duration-700 ease-out transform max-[380px]:h-[350px] h-[420px] rounded-2xl overflow-hidden iridescent-border
         ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}
       `}
       style={{
         transitionDelay: `${index * 100}ms`,
+        boxShadow: '0 8px 32px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.1)',
       }}
     >
       {/* Background placeholder to prevent white flash */}
@@ -36,8 +37,8 @@ const ServiceCards = ({ service, index, isVisible }) => {
         />
       </div>
 
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/70 to-transparent" />
+      {/* Overlay — glass gradient */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent" />
       
       <ServiceCardContent service={service} />
     </div>

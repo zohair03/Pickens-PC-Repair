@@ -28,7 +28,7 @@ const MegaMenu = ({ items, isClosing, navbarBottom, onMouseEnter, onMouseLeave }
   return createPortal(
     <div
       style={{ top: navbarBottom }}
-      className={`fixed left-0 w-full z-[999] bg-black/40 backdrop-blur-xl border-b-1  border-[#ffffff1a] shadow-2xl ${
+      className={`fixed left-0 w-full z-[999] liquid-glass-dark shadow-2xl ${
         isClosing ? "animate-slideUp" : "animate-slideDown"
       }`}
       onMouseEnter={onMouseEnter}
@@ -47,7 +47,7 @@ const MegaMenu = ({ items, isClosing, navbarBottom, onMouseEnter, onMouseLeave }
               <Link
                 key={item.title}
                 href={item.href}
-                className="transition-transform duration-400 hover:-translate-y-2 hover:shadow-xl flex items-start gap-6 group rounded-xl p-3 transition-colors bg-white transition-all ease-in-out duration-600"
+                className="transition-transform duration-400 hover:-translate-y-2 flex items-start gap-6 group rounded-xl p-3 liquid-glass-card iridescent-border transition-all ease-in-out duration-600"
               >
                 <div className="flex-shrink-0 w-[95px] h-[110px] relative rounded-md overflow-hidden">
                   <Image
@@ -57,11 +57,11 @@ const MegaMenu = ({ items, isClosing, navbarBottom, onMouseEnter, onMouseLeave }
                     className="object-cover"
                   />
                 </div>
-                <div className="flex flex-col gap-1">
-                  <h4 className="font-serif text-left text-gray-900 text-base leading-8 uppercase">
+                <div className="flex flex-col gap-1 glass-content">
+                  <h4 className="font-serif text-left text-white text-base leading-8 uppercase">
                     {item.title}
                   </h4>
-                  <p className="text-gray-700 font-sans text-sm leading-5">{item.description}</p>
+                  <p className="text-white/70 font-sans text-sm leading-5">{item.description}</p>
                 </div>
               </Link>
             ))}

@@ -13,9 +13,9 @@ const MobileMenu = ({ closeMenu, isClosing }) => {
       {/* Backdrop - click outside to close */}
       <div className="fixed inset-0 z-40" onClick={closeMenu} />
 
-      {/* Menu Panel */}
+      {/* Menu Panel — Liquid Glass */}
       <div
-        className={`relative z-50 lg:hidden bg-black/40 backdrop-blur-xl flex flex-col items-center gap-2 py-8 text-white font-semibold text-lg ${
+        className={`relative z-50 lg:hidden liquid-glass-dark flex flex-col items-center gap-2 py-8 text-white font-semibold text-lg ${
           isClosing ? "animate-slideUp" : "animate-slideDown"
         }`}
         style={{ maxHeight: "75vh", overflowY: "auto" }}

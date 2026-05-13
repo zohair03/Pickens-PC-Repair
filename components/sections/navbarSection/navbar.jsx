@@ -8,6 +8,8 @@ import NavLinks from "./navLinks";
 import MegaMenu from "./megaMenu";
 import MobileMenu from "./mobileMenu";
 import CallButton from "../../ui/buttons/callButton";
+import { GlassBtn } from "../../ui/buttons/GlassBtn";
+import PrimaryBtn from "../../ui/buttons/primaryBtn";
 import { aboutLinks, servicesLinks } from "./navData";
 
 const Navbar = () => {
@@ -105,21 +107,22 @@ const Navbar = () => {
 
         <TopBar />
 
-        {/* Main Navbar */}
+        {/* Main Navbar — Liquid Glass */}
         <div
-          className="relative flex justify-between items-center px-4 md:px-8 2xl:px-30 py-3 md:py-4"
+          className="relative flex justify-between items-center px-4 md:px-8 2xl:px-30 py-3 md:py-2"
           onMouseLeave={closeMega}
         >
           {/* Logo */}
-          <div className="shrink-0 transition-[filter] duration-300 hover:drop-shadow-[0_0_12px_rgba(247,109,54,0.35)]">
-            <Link href="/">
-              <Image
+          <div className="liquid-glass-strong-light rounded-full px-5 py-4 flex items-center justify-center">
+            <Link href="/" className="text-base font-serif leading-none text-white">
+              {/* <Image
                 src="/images/logo.png"
                 alt="Company Logo"
                 width={200}
                 height={200}
                 className="h-auto w-[140px] md:w-[180px]"
-              />
+              /> */}
+              RN Infotech
             </Link>
           </div>
 
@@ -127,9 +130,13 @@ const Navbar = () => {
           <NavLinks activeMega={activeMega} setActiveMega={openMega} />
 
           {/* Desktop CTA Button */}
-          <div className="hidden lg:block">
+          {/* <div className="hidden lg:block">
             <CallButton btnText="Call Us Now" />
-          </div>
+          </div> */}
+          {/* <GlassBtn className="text-white flex items-center justify-center font-semibold gap-4 max-sm:mb-[0px]">
+            Our Services
+          </GlassBtn> */}
+          <PrimaryBtn btnText="Our Services" />
 
           {/* Hamburger Button */}
           <button
@@ -181,6 +188,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-
-// bg-black/40 backdrop-blur-2xl border-b-1  border-[#ffffff1a]

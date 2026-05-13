@@ -19,7 +19,7 @@ const sharedClasses = `
   min-w-[90%] md:min-w-[220px] min-h-[50px]
   flex items-center justify-center
   relative overflow-hidden
-  btn-primary btn-press
+  btn-primary btn-press liquid-glass-btn
 `;
 
 const CallButton = ({btnText, custom, disabled}) => {

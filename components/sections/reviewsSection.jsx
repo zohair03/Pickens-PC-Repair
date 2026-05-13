@@ -82,9 +82,26 @@ const Reviews = () => {
   return (
     <section
       ref={ref}
-      className="p-8 lg:py-12 lg:px-16 2xl:px-35"
+      className="relative overflow-hidden p-8 lg:py-12 lg:px-16 2xl:px-35"
+      style={{
+        background: 'linear-gradient(180deg, #ffffff 0%, #faf6f3 25%, #f5efe9 50%, #faf6f3 75%, #ffffff 100%)',
+      }}
     >
-      <div className="flex flex-col gap-6 md:gap-8">
+      {/* Decorative blobs */}
+      <div className="absolute top-[15%] right-[5%] w-[280px] h-[280px] rounded-full opacity-20 pointer-events-none"
+        style={{
+          background: 'radial-gradient(circle, rgba(247, 109, 54, 0.12) 0%, transparent 70%)',
+          filter: 'blur(70px)',
+        }}
+      />
+      <div className="absolute bottom-[20%] left-[8%] w-[220px] h-[220px] rounded-full opacity-18 pointer-events-none"
+        style={{
+          background: 'radial-gradient(circle, rgba(232, 100, 58, 0.1) 0%, transparent 70%)',
+          filter: 'blur(60px)',
+        }}
+      />
+
+      <div className="relative z-10 flex flex-col gap-6 md:gap-8">
         {/* Header */}
         <div
           className={`flex flex-col items-center text-center gap-4 transition-all duration-700 ease-out

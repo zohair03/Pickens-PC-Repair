@@ -60,8 +60,26 @@ const WhyChooseUs = () => {
   }
 
   return (
-    <section ref={ref} className="px-8 py-14 lg:py-18 lg:px-16 2xl:px-50">
-      <div className="h-full">
+    <section ref={ref} className="relative overflow-hidden px-8 py-14 lg:py-18 lg:px-16 2xl:px-50"
+      style={{
+        background: 'linear-gradient(180deg, #ffffff 0%, #fef5f0 30%, #fdf0e8 50%, #fef5f0 70%, #ffffff 100%)',
+      }}
+    >
+      {/* Subtle decorative blobs */}
+      <div className="absolute top-[30%] left-[10%] w-[250px] h-[250px] rounded-full opacity-20 pointer-events-none"
+        style={{
+          background: 'radial-gradient(circle, rgba(247, 109, 54, 0.15) 0%, transparent 70%)',
+          filter: 'blur(60px)',
+        }}
+      />
+      <div className="absolute bottom-[20%] right-[10%] w-[200px] h-[200px] rounded-full opacity-20 pointer-events-none"
+        style={{
+          background: 'radial-gradient(circle, rgba(255, 171, 138, 0.15) 0%, transparent 70%)',
+          filter: 'blur(60px)',
+        }}
+      />
+
+      <div className="relative z-10 h-full">
         <div className="flex gap-8 md:gap-10 flex-col items-center justify-center">
 
           {/* Header */}

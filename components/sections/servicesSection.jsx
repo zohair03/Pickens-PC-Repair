@@ -70,10 +70,19 @@ const Services = () => {
   return (
     <section
       ref={ref}
-      className="py-8 px-6 sm:px-8 lg:py-12 lg:px-16 2xl:px-35"
-      style={{ boxShadow: "inset 0 60px 50px -10px #facdbe" }}
+      className="relative overflow-hidden py-8 px-6 sm:px-8 lg:py-12 lg:px-16 2xl:px-35"
+      style={{
+        background: 'linear-gradient(180deg, #fff5f0 0%, #ffffff 30%, #ffffff 70%, #fff8f5 100%)',
+      }}
     >
-      <div className={`flex flex-col items-center gap-4 mb-8 md:mb-10 transition-all duration-700 ease-out
+      {/* Subtle warm gradient overlay */}
+      <div className="absolute top-0 left-0 right-0 h-[120px]"
+        style={{
+          background: 'linear-gradient(180deg, rgba(247, 109, 54, 0.08) 0%, transparent 100%)',
+        }}
+      />
+
+      <div className={`relative z-10 flex flex-col items-center gap-4 mb-8 md:mb-10 transition-all duration-700 ease-out
         ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}>
         <div className="flex flex-col gap-2">
           <Label label="What We Do" />
@@ -82,7 +91,7 @@ const Services = () => {
         <H2Subtitle text="Reliable laptop & computer solutions — all under one roof." />
       </div>
 
-      <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+      <div className="relative z-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
         {services.map((service, index) => (
           <ServiceCards
             key={service.id}
@@ -93,7 +102,7 @@ const Services = () => {
         ))}
       </div>
 
-      <div className={`w-full flex justify-center mt-8 transition-all duration-700 ease-out delay-700
+      <div className={`relative z-10 w-full flex justify-center mt-8 transition-all duration-700 ease-out delay-700
         ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}>
         <PrimaryBtn href="/" btnText="View All Services" />
       </div>
