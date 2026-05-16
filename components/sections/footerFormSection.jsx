@@ -43,7 +43,7 @@ const FooterForm = () => {
       <div className="floating-orb floating-orb-2 bottom-[10%] right-[10%]" />
 
       {/* Left - Contact Info — Liquid Glass */}
-      <div className="relative z-10 flex flex-col gap-5 items-start w-full lg:w-1/2 rounded-2xl p-6 md:p-10 liquid-glass-form iridescent-border">
+      <div className=" relative z-10 flex flex-col gap-5 items-start w-full lg:w-1/2 rounded-2xl p-6 md:p-10 liquid-glass-form iridescent-border">
         <div className="glass-content flex flex-col gap-5 w-full">
           <div className="flex flex-col gap-3">
             <h3 className="font-serif text-xl md:text-2xl 2xl:text-3xl text-white">
