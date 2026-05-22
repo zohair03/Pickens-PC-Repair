@@ -3,13 +3,13 @@ import Link from "next/link";
 
 const WhyCardContent = ({ card }) => (
   <>
-    <div className="bg-primary rounded-xl p-3 flex-shrink-0 flex items-center justify-center">
+    <div className="bg-why-card-icon-bg rounded-xl p-3 flex-shrink-0 flex items-center justify-center">
       <Image
         src={card.icon}
         alt="Icon"
         width={30}
         height={30}
-        className="icon-color md:w-[40px] md:h-[40px]"
+        className="[filter:var(--color-why-card-icon)] md:w-[40px] md:h-[40px]"
       />
     </div>
     <div className="flex flex-col gap-3 items-start">
@@ -26,7 +26,7 @@ const WhyCardContent = ({ card }) => (
           alt="Arrow Icon"
           width={16}
           height={16}
-          className="icon-primary"
+          className="[filter:var(--color-icon-primary)]"
         />
       </Link>
     </div>

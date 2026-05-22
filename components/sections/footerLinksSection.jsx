@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import CallButton from "../ui/buttons/callButton";
+import BusinessInfo from "@/cms/business Info/businessInfo";
 
 const quickLinks1 = [
   { title: "Home", href: "/" },
@@ -22,9 +23,9 @@ const servicesLinks1 = [
 
 const servicesLinks2 = [];
 
-const   FooterLinks = () => {
+const FooterLinks = () => {
   return (
-    <footer className="relative overflow-hidden bg-gradient-to-t from-[#290e04] to-[#2e221e] text-white font-sans">
+    <footer className="relative overflow-hidden bg-gradient-to-t from-footer-bg via-footer-bg to-footer-bg text-white font-sans">
       {/* Floating orbs */}
       <div className="floating-orb floating-orb-1 top-[20%] left-[5%] opacity-50" />
       <div className="floating-orb floating-orb-3 bottom-[15%] right-[8%] opacity-40" />
@@ -39,13 +40,10 @@ const   FooterLinks = () => {
               href="/"
               className="logo-glow text-5xl lg:text-3xl xl:text-5xl text-red-500"
             >
-              <Image
-                src="/images/logo.png"
-                alt="Company Logo"
-                width={250}
-                height={250}
-                className=""
-              />
+              <Link href="/" className="text-xl font-serif leading-relaxed text-[#7B52AB] tracking-tighter uppercase leading-none">
+
+                RN<br />Infotech
+              </Link>
             </Link>
           </div>
 
@@ -175,10 +173,10 @@ const   FooterLinks = () => {
             </h4>
             <div className="flex flex-col gap-4">
               <p className="text-white/80 text-sm md:text-base hover:text-white transition-colors">
-                +91 9535216410
+                {BusinessInfo.PrimaryContactNumber}
               </p>
               <p className="text-white/80 text-sm md:text-base hover:text-white transition-colors">
-                ramesh.kumar@rninfotech.co.in
+                {BusinessInfo.Email}
               </p>
               <a
                 href=""
@@ -186,8 +184,7 @@ const   FooterLinks = () => {
                 rel="noopener noreferrer"
                 className="text-white/80 text-sm md:text-base leading-relaxed hover:text-white transition-colors"
               >
-                23/2, Jaraganahalli Grama Main road, GKM College Road,
-                Jaraganahalli, Bengaluru, Karnataka, 560078
+                {BusinessInfo.Address}
               </a>
             </div>
           </div>

@@ -6,16 +6,17 @@ import { useInView } from "react-intersection-observer";
 import Label from "../ui/texts/Label";
 import FinalCtaH2 from "../ui/texts/FinalCtaH2";
 import FinalCtaSubtitle from "../ui/texts/FinalCtaSubtitle";
+import { FinalCtaContent } from "@/cms/content/content";
 
 const FinalCta = ({
-  label = "Get In Touch",
-  title = "Ready to Upgrade Your Tech Stack?",
-  subtitle = "Join thousands of satisfied customers and businesses who trust RN Infotech for their hardware needs.",
-  cta1 = "Call Us Now",
-  href1,
-  cta2 = "Get a Quote Today",
-  href2 = "/",
-  image = "bg-[url('/images/rn-infotech-final-bg.webp')]",
+  label = FinalCtaContent.label,
+  title = FinalCtaContent.heading,
+  subtitle = FinalCtaContent.subtitle,
+  cta1 = FinalCtaContent.btn1Text,
+  href1 = FinalCtaContent.href1,
+  cta2 = FinalCtaContent.btn2Text,
+  href2 = FinalCtaContent.href2,
+  image = FinalCtaContent.image,
   height = "min-sm:h-[70vh]",
   headingFontSize,
 }) => {
@@ -76,5 +77,6 @@ const FinalCta = ({
     </section>
   );
 };
+;
 
 export default FinalCta;

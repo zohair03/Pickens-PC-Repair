@@ -11,6 +11,7 @@ import PrimaryBtn from "../../ui/buttons/primaryBtn";
 import CallButton from "../../ui/buttons/callButton";
 import TertiaryBtn from "../../ui/buttons/TertiaryBtn";
 import { aboutLinks, servicesLinks } from "./navData";
+import BusinessInfo from "../../../cms/business Info/businessInfo"
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -108,7 +109,8 @@ const Navbar = () => {
           <div className="hidden lg:flex justify-between items-center" onMouseLeave={closeMega}>
             {/* Logo */}
             <Link href="/" className="text-xl font-serif leading-relaxed text-[#7B52AB] tracking-tighter uppercase leading-none">
-              Skin<br />Method
+              {/* {BusinessInfo.Logo} */}
+              RN<br />Infotech
             </Link>
 
             {/* Desktop Nav Links */}

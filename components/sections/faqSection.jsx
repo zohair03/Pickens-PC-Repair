@@ -46,19 +46,8 @@ const Faqs = ({ image = "/images/rn-infotech-55.webp", faqs = [], label = "? FAQ
   }
 
   return (
-    <section ref={ref} className="relative overflow-hidden max-[380px]:px-5 p-8 lg:py-12 lg:px-16 2xl:px-50"
-      style={{
-        background: 'linear-gradient(180deg, #ffffff 0%, #fdf8f5 30%, #faf3ee 50%, #fdf8f5 70%, #ffffff 100%)',
-      }}
-    >
-      {/* Decorative blob */}
-      <div className="absolute top-[25%] left-[5%] w-[220px] h-[220px] rounded-full opacity-20 pointer-events-none"
-        style={{
-          background: 'radial-gradient(circle, rgba(247, 109, 54, 0.1) 0%, transparent 70%)',
-          filter: 'blur(60px)',
-        }}
-      />
-
+    <section ref={ref} className="bg-[image:var(--color-section-bg-faqs)] relative overflow-hidden max-[380px]:px-5 p-8 lg:py-12 lg:px-16 2xl:px-50">
+      
       <div className="relative z-10 flex flex-col gap-8 md:gap-12 items-center">
 
         <div

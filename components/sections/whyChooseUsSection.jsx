@@ -5,30 +5,8 @@ import { useInView } from "react-intersection-observer";
 import H2 from "../ui/texts/H2";
 import Label from "../ui/texts/Label";
 import WhyCard from "../ui/cards/WhyCard";
+import { WhyChooseUsContent } from "@/cms/content/content";
 
-const cards = [
-  {
-    id: 1,
-    icon: "/icons/workspace_premiu.svg",
-    text: "Diverse Inventory: From the smallest mobile chip to massive server racks, we house everything under one roof.",
-    linkText: "About Us",
-    href: "/",
-  },
-  {
-    id: 2,
-    icon: "/icons/shield_with_heart.svg",
-    text: "Quality Assured: We only deal in genuine parts and components from trusted global brands.",
-    linkText: "Testimonials",
-    href: "/",
-  },
-  {
-    id: 3,
-    icon: "/icons/sentiment_very_satisfied.svg",
-    text: "Outstanding Support: Our background in retail services ensures you get help when you need it most.",
-    linkText: "Contact Now",
-    href: "/",
-  },
-];
 
 const WhyChooseUs = () => {
   const [isMounted, setIsMounted] = useState(false);
@@ -60,25 +38,8 @@ const WhyChooseUs = () => {
   }
 
   return (
-    <section ref={ref} className="relative overflow-hidden px-8 py-14 lg:py-18 lg:px-16 2xl:px-50"
-      style={{
-        background: 'linear-gradient(180deg, #ffffff 0%, #fef5f0 30%, #fdf0e8 50%, #fef5f0 70%, #ffffff 100%)',
-      }}
-    >
-      {/* Subtle decorative blobs */}
-      <div className="absolute top-[30%] left-[10%] w-[250px] h-[250px] rounded-full opacity-20 pointer-events-none"
-        style={{
-          background: 'radial-gradient(circle, rgba(247, 109, 54, 0.15) 0%, transparent 70%)',
-          filter: 'blur(60px)',
-        }}
-      />
-      <div className="absolute bottom-[20%] right-[10%] w-[200px] h-[200px] rounded-full opacity-20 pointer-events-none"
-        style={{
-          background: 'radial-gradient(circle, rgba(255, 171, 138, 0.15) 0%, transparent 70%)',
-          filter: 'blur(60px)',
-        }}
-      />
-
+    <section ref={ref} className="bg-[image:var(--color-section-bg-whychooseus)] relative overflow-hidden px-8 py-14 lg:py-18 lg:px-16 2xl:px-50">
+      
       <div className="relative z-10 h-full">
         <div className="flex gap-8 md:gap-10 flex-col items-center justify-center">
 
@@ -87,13 +48,13 @@ const WhyChooseUs = () => {
             className={`flex flex-col gap-4 justify-center items-center mb-3 transition-all duration-700 ease-out
               ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}
           >
-            <Label label="Why Us" />
-            <H2 text="Why Tech Professionals Choose RN Infotech" />
+            <Label label={WhyChooseUsContent.label} />
+            <H2 text={WhyChooseUsContent.heading} />
           </div>
 
           <div className="w-full flex flex-col xl:flex-row gap-5 justify-between">
-            {cards.map((card, index) => (
-              <WhyCard key={card.id} card={card} index={index} isVisible={inView} />
+            {WhyChooseUsContent.cards.map((card, index) => (
+              <WhyCard key={index} card={card} index={index} isVisible={inView} />
             ))}
           </div>
 
@@ -101,7 +62,7 @@ const WhyChooseUs = () => {
             className={`flex flex-col justify-center items-center mt-2 lg:mt-4 w-full md:w-fit transition-all duration-700 ease-out delay-700
               ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}
           >
-            <PrimaryBtn custom={"w-[80%]"} href="/" btnText="Schedule a Repair" />
+            <PrimaryBtn custom={"w-[80%]"} href={WhyChooseUsContent.href} btnText={WhyChooseUsContent.btnText} />
           </div>
 
         </div>

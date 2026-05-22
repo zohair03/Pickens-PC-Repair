@@ -3,8 +3,8 @@ import React from "react";
 
 // Theme colors — change here to retheme
 const theme = {
-  text:      "text-[#e08c70]",
-  textHover: "hover:text-[#e0b5a0]",
+  text:      "text-secondary-btn-text",
+  textHover: "hover:text-secondary-btn-text-hover",
 };
 
 const sharedClasses = `
@@ -13,7 +13,7 @@ const sharedClasses = `
   min-w-[90%] md:min-w-[220px] min-h-[50px]
   flex items-center justify-center
   relative overflow-hidden
-  btn-border-glow btn-press
+  btn-border-glow btn-press hover:scale-105 active:scale-95
 `;
 
 const SecondaryBtn = ({ btnText, href, custom }) => {

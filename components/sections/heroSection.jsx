@@ -5,6 +5,7 @@ import SecondaryBtn from "../ui/buttons/secondaryBtn";
 import HeroHeading from "../ui/texts/HeroHeading";
 import HeroSubtitle from "../ui/texts/HeroSubtitle";
 import { GlassBtn } from "../ui/buttons/GlassBtn";
+import { hero } from "../../cms/content/content";
 
 
 const Hero = () => {
@@ -17,9 +18,8 @@ const Hero = () => {
     return () => clearTimeout(t);
   }, []);
 
-
   return (
-    <section className="bg-[url('/images/rn-infotech-17.webp')] bg-cover bg-center h-[92vh] relative flex flex-col items-center justify-center max-[380px]:px-4 p-8 py-12 overflow-hidden bg-black">
+    <section className={`${hero.bgImage} bg-cover bg-center h-[92vh] relative flex flex-col items-center justify-center max-[380px]:px-4 p-8 py-12 overflow-hidden bg-black`}>
 
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/50 z-[1]" />
@@ -27,13 +27,11 @@ const Hero = () => {
       {/* Hero content */}
       <div className="relative z-10 flex flex-col items-center justify-center gap-4 md:gap-6">
         <HeroHeading
-          text="Your Trusted Partner for Next-Gen Tech & Networking"
+          text={hero.heading}
           custom={`${isMounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}
         />
         <HeroSubtitle
-          text="From high-performance laptops and mobile parts to enterprise-grade
-              server systems, RN Infotech delivers quality hardware and networking
-              components right to your doorstep"
+          text={hero.subtitle}
           custom={`${isMounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}
         />
 
@@ -43,16 +41,11 @@ const Hero = () => {
                 ${isMounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}
           style={{ transitionDelay: "400ms" }}
         >
-          <PrimaryBtn href="/" btnText="View Services" custom="text-white" />
-          {/* <SecondaryBtn
-            href="/"
-            custom="border border-light-blue"
-            btnText="Shop Now"
-          /> */}
-          <GlassBtn className="text-white flex items-center justify-center font-semibold gap-4 max-sm:mb-[0px]">
-            Shecdule Now
-          </GlassBtn> 
+          {/* <PrimaryBtn href={hero.href1} btnText={hero.btn1Text} custom="text-white" /> */}
+          <SecondaryBtn href={hero.href1} btnText={hero.btn1Text} custom="border border-light-blue" />
+          <GlassBtn href={hero.href2} className="text-white flex items-center justify-center font-semibold gap-4 max-sm:mb-[0px]"> {hero.btn2Text} </GlassBtn>
         </div>
+        
       </div>
     </section>
   );

@@ -1,16 +1,17 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
+import BusinessInfo from "../../../cms/business Info/businessInfo.js";
 
-const PHONE_NUMBER = "+91 9535216410";
+const PHONE_NUMBER = BusinessInfo.PrimaryContactNumber;
 
 // Theme colors — change here to retheme
 const theme = {
-  bg:          "bg-orange-600 liquid-glass-strong-light",
-  bgHover:     "hover:bg-orange-400",
+  bg:          "bg-primary-btn liquid-glass-strong-light",
+  bgHover:     "hover:bg-primary-btn-hover",
   bgDisabled:  "disabled:bg-gray-400",
-  text:        "text-[#1a0a04]",
-  textHover:   "hover:text-[#1a0a04]",
+  text:        "text-primary-btn-text",
+  textHover:   "hover:text-primary-btn-text-hover",
 };
 
 const sharedClasses = `
@@ -47,6 +48,7 @@ const CallButton = ({btnText, custom, disabled}) => {
           alt="Call icon"
           width={20}
           height={20}
+          className="[filter:var(--color-primary-btn-icon)] hover:[filter:var(--color-primary-btn-icon-hover)]"
         />
         <div className="shimmer" />
         {showNumber ? PHONE_NUMBER : btnText}
@@ -63,6 +65,7 @@ const CallButton = ({btnText, custom, disabled}) => {
           alt="Call icon"
           width={20}
           height={20}
+          className="icon-color"
         />
         <div className="shimmer" />
         {btnText}

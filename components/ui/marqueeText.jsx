@@ -1,10 +1,5 @@
-const marqueeItems = [
-  "Free Shipping on bulk orders!",
-  "Call us at +91 9535216410 for expert advice",
-  "Visit our store in Jaraganahalli, Bengaluru",
-  "Genuine Parts Guaranteed!",
-  "Leading Dealers in Server Systems & Networking Components",
-];
+import { MarqueeText } from "../../cms/content/content";
+
 
 const Marquee = () => {
   return (
@@ -24,14 +19,14 @@ const Marquee = () => {
           {/* Scrolling text track */}
           <div className="led-scroll-track">
             {/* First set */}
-            {marqueeItems.map((item, i) => (
+            {MarqueeText.map((item, i) => (
               <span key={`a-${i}`} className="led-text">
                 {item}
               </span>
             ))}
 
             {/* Duplicate set for seamless loop */}
-            {marqueeItems.map((item, i) => (
+            {MarqueeText.map((item, i) => (
               <span key={`b-${i}`} className="led-text">
                 {item}
               </span>

@@ -1,13 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
+import BusinessInfo from "../../../cms/business Info/businessInfo"
 
 const TopBar = ({ menuOpen, toggleMenu }) => {
   return (
-    <div className="bg-[#DED2FF] flex justify-between items-center py-3 px-4 md:px-8 2xl:px-30 relative border-b border-black/5">
+    <div className="bg-topbar-bg flex justify-between items-center py-3 px-4 md:px-8 2xl:px-30 relative border-b border-black/5">
       {/* Left group: Reviews */}
       <div className="flex items-center gap-1.5">
         <div className="flex items-center gap-2">
-          <span className="font-bold text-base text-black tracking-tight">
+          <span className="font-bold text-base text-topbar-text tracking-tight">
             5.0
           </span>
           <div className="flex items-center gap-0.5">
@@ -24,7 +25,7 @@ const TopBar = ({ menuOpen, toggleMenu }) => {
           </div>
           <Link
             href="#"
-            className="text-[0.85rem] text-black/80 underline decoration-black/30 underline-offset-2 hover:text-primary transition-colors"
+            className="text-[0.85rem] text-topbar-text underline decoration-black/30 underline-offset-2 hover:text-topbar-text-hover transition-colors"
           >
             (42 Reviews)
           </Link>
@@ -42,10 +43,10 @@ const TopBar = ({ menuOpen, toggleMenu }) => {
               alt="Location"
               width={18}
               height={18}
-              className="opacity-70"
+              className="[filter:var(--color-primary-btn-icon)] hover:[filter:var(--color-primary-btn-icon-hover)]"
             />
-            <p className="text-[0.85rem] text-black/80 font-medium">
-              Proudly Serving: <span className="font-bold">San Francisco, Marin, Napa</span>
+            <p className="text-[0.85rem] text-topbar-text font-medium">
+              Proudly Serving: <span className="font-bold">{BusinessInfo.ShortAddress}</span>
             </p>
           </div>
 
@@ -56,10 +57,10 @@ const TopBar = ({ menuOpen, toggleMenu }) => {
               alt="Phone"
               width={18}
               height={18}
-              className="opacity-70"
+              className="[filter:var(--color-primary-btn-icon)] hover:[filter:var(--color-primary-btn-icon-hover)]"
             />
-            <p className="text-[0.85rem] text-black/80 font-medium">
-              Call or Text: <span className="font-bold">(415) 555-7777</span>
+            <p className="text-[0.85rem] text-topbar-text font-medium">
+              Call or Text: <span className="font-bold">{BusinessInfo.PrimaryContactNumber}</span>
             </p>
           </div>
         </div>

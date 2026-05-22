@@ -1,10 +1,5 @@
 @import "tailwindcss";
 
-/* ═══════════════════════════════════════════════
-   LIQUID GLASS DESIGN SYSTEM
-   ═══════════════════════════════════════════════ */
-
-/* ── Base Liquid Glass ── */
 .liquid-glass {
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(20px) saturate(1.4);
@@ -215,7 +210,7 @@
 
 .glass-input:focus {
   background: rgba(255, 255, 255, 0.12) !important;
-  border-color: rgba(247, 109, 54, 0.5) !important;
+  border-color: var(--color-footer-form-placeholder-border) !important;
   box-shadow: 0 0 20px rgba(247, 109, 54, 0.1);
   outline: none;
 }
@@ -246,10 +241,10 @@
   border-radius: inherit;
   padding: 1px;
   background: linear-gradient(135deg,
-      rgba(247, 109, 54, 1),
-      rgba(255, 180, 130, 0.85),
-      rgba(255, 220, 180, 0.7),
-      rgba(247, 109, 54, 1));
+      var(--color-iridescent-border),
+      var(--color-iridescent-border-shade-1),
+      var(--color-iridescent-border-shade-2),
+      var(--color-iridescent-border-dark-shade));
   background-size: 300% 300%;
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
@@ -324,21 +319,21 @@
 .floating-orb-1 {
   width: 300px;
   height: 300px;
-  background: rgba(247, 109, 54, 0.15);
+  background: var(--color-footer-form-floating-orb);
   animation: float-orb 12s ease-in-out infinite;
 }
 
 .floating-orb-2 {
   width: 250px;
   height: 250px;
-  background: rgba(232, 100, 58, 0.12);
+  background: var(--color-footer-form-floating-orb);
   animation: float-orb-reverse 15s ease-in-out infinite;
 }
 
 .floating-orb-3 {
   width: 200px;
   height: 200px;
-  background: rgba(255, 171, 138, 0.1);
+  background: var(--color-footer-form-floating-orb);
   animation: float-orb 18s ease-in-out infinite;
 }
 
@@ -375,16 +370,71 @@
   --font-serif: var(--font-boldonse);
   --font-bitcount: var(--font-bitcount-single);
 
-  --color-primary: #F76D36;
-  --color-secondary: #252525;
-  --color-light-blue: #ffab8a;
-  --color-section-bg: #f3f3f3;
+  --color-primary: #520EE9;
+  --color-secondary: #986DD6;
 
   --color-color-herotext: #ffffff;
   --color-color-headings: #272a2f;
   --color-color-h3: #36435b;
   --color-color-bodytext: #020202;
   --color-color-default: #36435b;
+
+ --color-primary-btn: #520EE9;
+  --color-primary-btn-hover: #3B09A8;
+  --color-primary-btn-text: #FFFFFF;
+  --color-primary-btn-text-hover: #FFFFFF;
+  --color-primary-btn-icon: brightness(0) invert(1);
+  --color-primary-btn-icon-hover: brightness(0) invert(1);
+
+  --color-secondary-btn: #986DD6;
+  --color-secondary-btn-hover: #7B4EB8;
+  --color-secondary-btn-text: #F2E6F2;
+  --color-secondary-btn-text-hover: #F2E6F2;
+  --color-secondary-btn-br1-color:#EC9DF2;
+  --color-secondary-btn-br2-color:#F2E6F2;
+
+  --color-marquee-text: #F1C9F1;
+  --color-marquee-text-shadow-1:#912CF1;
+  --color-marquee-text-shadow-2:#DE73F1;
+  --color-marquee-text-shadow-3:#280DC6;
+
+  --color-label-text:var(--color-primary);
+
+  --color-topbar-bg: #120235;
+  --color-topbar-text: #986DD6;
+  --color-topbar-text-hover:;
+  --color-topbar-icon:#986DD6;
+
+  --color-iridescent-border:var(--color-primary);
+  --color-iridescent-border-shade-1:#CF76E7;
+  --color-iridescent-border-shade-2:#F2E1F2;
+  --color-iridescent-border-dark-shade:#330ED6;
+
+  --color-icon-primary: brightness(0) saturate(100%) invert(11%) sepia(83%) saturate(7429%) hue-rotate(263deg) brightness(87%) contrast(112%);;
+
+  --color-why-card-icon-bg: var(--color-primary);
+  --color-why-card-icon: brightness(0) invert(1);
+
+  --color-plus-icon: #ffffff;
+  --color-plus-bg: var(--color-primary);
+
+  --color-footer-form-bg:var(--color-topbar-bg);
+  --color-footer-form-text: #ffffff;
+  --color-footer-form-text-hover: #A73EF1;
+  --color-footer-form-floating-orb: rgba(80, 2, 250, 0.15);
+  --color-footer-form-icon: brightness(0) invert(1);
+  --color-footer-form-placeholder-border: #E4A8F1;
+
+  --color-footer-bg: var(--color-topbar-bg);
+  --color-footer-text: #E5DCF9;
+
+  --color-section-bg:;
+  --color-section-bg-service: linear-gradient(to bottom, #ffffff, #ECBEF7);
+  --color-section-bg-aboutus: linear-gradient(to bottom, #ECBEF7, #C7B5FB);
+  --color-section-bg-testimonials: linear-gradient(to bottom, #F7EBF7, #ECBEF7);
+  --color-section-bg-whychooseus: linear-gradient(to bottom, #C7B5FB, #F7EBF7);
+  --color-section-bg-faqs: linear-gradient(to bottom, #ECBEF7, #C7B5FB);
+  
 
   --text-h1: 4rem;
   --text-h2: 1.5rem;
@@ -474,49 +524,6 @@
   animation: led-flicker 8s ease-in-out infinite;
 }
 
-/* Decorative screws */
-.led-screw {
-  position: absolute;
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background: radial-gradient(circle at 35% 35%, #666 0%, #333 60%, #222 100%);
-  border: 1px solid #1a1a1a;
-  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.15);
-  z-index: 10;
-}
-
-.led-screw::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(35deg);
-  width: 5px;
-  height: 1px;
-  background: #1a1a1a;
-}
-
-.led-screw-tl {
-  top: 4px;
-  left: 6px;
-}
-
-.led-screw-tr {
-  top: 4px;
-  right: 6px;
-}
-
-.led-screw-bl {
-  bottom: 4px;
-  left: 6px;
-}
-
-.led-screw-br {
-  bottom: 4px;
-  right: 6px;
-}
-
 /* Display area — the actual "screen" */
 .led-display {
   position: relative;
@@ -595,31 +602,17 @@
   font-family: var(--font-bitcount), 'Courier New', monospace;
   font-size: 1rem;
   font-weight: normal;
-  color: #ff6a2a;
+  color: var(--color-marquee-text);
   letter-spacing: 0.08em;
   text-transform: uppercase;
   text-shadow:
-    0 0 4px #ff6a2a,
-    0 0 10px rgba(255, 106, 42, 0.7),
-    0 0 22px rgba(255, 80, 20, 0.4),
-    0 0 44px rgba(255, 60, 10, 0.15);
+    0 0 4px var(--color-marquee-text),
+    0 0 10px var(--color-marquee-text-shadow-1),
+    0 0 22px var(--color-marquee-text-shadow-2),
+    0 0 44px var(--color-marquee-text-shadow-3);
   padding: 0 8px;
   animation: led-pulse 3s ease-in-out infinite;
 }
-
-/* Star separator between items */
-.led-separator {
-  display: inline-block;
-  margin: 0 12px;
-  font-size: 0.55rem;
-  color: #ff9e40;
-  text-shadow:
-    0 0 6px #ff9e40,
-    0 0 14px rgba(255, 158, 64, 0.5);
-  vertical-align: middle;
-  opacity: 0.8;
-}
-
 
 
 @keyframes slideDown {
@@ -783,66 +776,6 @@
     pointer-events: none;
   }
 
-
-  /* ── Light background variant ──
-  .liquid-glass-light {
-    background: rgba(0, 0, 0, 0.04);
-    background-blend-mode: luminosity;
-    backdrop-filter: blur(4px);
-    border: none;
-    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.6);
-    position: relative;
-    overflow: hidden;
-  }
-
-  .liquid-glass-light::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    padding: 1.4px;
-    border-radius: inherit;
-    background: linear-gradient(180deg,
-        rgba(0, 0, 0, 0.12) 0%,
-        rgba(0, 0, 0, 0.05) 20%,
-        transparent 40%,
-        transparent 60%,
-        rgba(0, 0, 0, 0.05) 80%,
-        rgba(0, 0, 0, 0.12) 100%);
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-    pointer-events: none;
-  }
-
-  .liquid-glass-strong-light {
-    background: rgba(0, 0, 0, 0.04);
-    background-blend-mode: luminosity;
-    backdrop-filter: blur(50px);
-    border: none;
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.08), inset 0 1px 1px rgba(255, 255, 255, 0.7);
-    position: relative;
-    overflow: hidden;
-  }
-
-  .liquid-glass-strong-light::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    padding: 1.4px;
-    border-radius: inherit;
-    background: linear-gradient(180deg,
-        rgba(0, 0, 0, 0.15) 0%,
-        rgba(0, 0, 0, 0.06) 20%,
-        transparent 40%,
-        transparent 60%,
-        rgba(0, 0, 0, 0.06) 80%,
-        rgba(0, 0, 0, 0.15) 100%);
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-    pointer-events: none;
-  } */
-
   .liquid-glass-light {
     background: rgba(0, 0, 0, 0.12);
     background-blend-mode: luminosity;
@@ -905,8 +838,6 @@
 
 
 }
-
-
 
 /* ── Shared: shimmer sweep ── */
 @keyframes shimmer-sweep {
@@ -984,8 +915,8 @@
   background: conic-gradient(from var(--border-angle),
       transparent 0%,
       transparent 40%,
-      #94300f 50%,
-      #e08c70 55%,
+      var(--color-secondary-btn-br1-color) 50%,
+      var(--color-secondary-btn-br2-color) 55%,
       transparent 65%,
       transparent 100%);
   z-index: -1;
@@ -997,7 +928,7 @@
   position: absolute;
   inset: 2px;
   border-radius: 9999px;
-  background: #360f02;
+  background: var(--color-secondary-btn);
   z-index: -1;
   transition: background 0.35s ease;
 }
@@ -1009,7 +940,7 @@
 }
 
 .btn-border-glow:hover::after {
-  background: #252525;
+  background: var(--color-secondary-btn-hover);
 }
 
 .btn-border-glow:hover {
@@ -1018,57 +949,11 @@
 
 
 
-
-
 body {
   background-color: white;
 }
 
 @layer base {
-
-  /* buttons  */
-  .primaryBtn {
-    font-weight: 600;
-    font-size: 1.1rem;
-    background-color: var(--color-primary);
-    color: var(--color-secondary);
-    padding: 0.5rem 2rem;
-    border-radius: 0.5rem;
-    transition: 0.3s ease;
-    text-transform: uppercase;
-    min-width: 230px;
-    min-height: 60px;
-  }
-
-  .primaryBtn:hover {
-    background-color: #43b1f5;
-  }
-
-  .secondaryBtn {
-    font-weight: 600;
-    font-size: 1.1rem;
-    background-color: var(--color-secondary);
-    color: var(--color-light-blue);
-    padding: 0.5rem 2rem;
-    border-radius: 0.5rem;
-    transition: 0.3s ease;
-    text-transform: uppercase;
-    min-width: 230px;
-    min-height: 60px;
-  }
-
-  .secondaryBtn:hover {
-    background-color: #00234c;
-  }
-
-  .tertiaryBtn {
-    background-color: var(--color-accent);
-    color: var(--color-herotext);
-    padding: 0.5rem 1rem;
-    border-color: white;
-    border-radius: 0.25rem;
-    transition: 0.3s ease;
-  }
 
   /* headings */
   h1 {
@@ -1115,9 +1000,9 @@ body {
 @layer components {
 
   /* icons */
-  .icon-color {
+  /* .icon-color {
     filter: brightness(0) invert(1);
-  }
+  } */
 
   .icon-color-black {
     filter: brightness(0) invert(0);
@@ -1129,21 +1014,6 @@ body {
 
   .icon-primary {
     filter: brightness(0) saturate(100%) invert(51%) sepia(98%) saturate(400%) hue-rotate(175deg) brightness(95%);
-  }
-
-  /* label */
-  .label {
-    color: var(--color-primary);
-    font-style: var(--font-sans);
-    font-size: 1.1rem;
-    font-weight: bold;
-    text-transform: uppercase;
-  }
-
-  @media screen and (max-width: 375px) {
-    .label {
-      font-size: 0.8rem;
-    }
   }
 
   .border-color {

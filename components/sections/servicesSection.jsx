@@ -8,36 +8,8 @@ import Label from "../ui/texts/Label";
 import H2 from "../ui/texts/H2";
 import H2Subtitle from "../ui/texts/H2Subtitle";
 import ServiceCards from "../ui/cards/ServiceCards";
+import { ServicesContent } from "../../cms/content/content";
 
-const services = [
-  {
-    id: "01",
-    title: "Server Systems & Networking",
-    description:
-      "We are specialists in server deployment and high-quality networking components to keep your business connected.",
-    image: "/images/rn-infotech-30.webp",
-    btnText: "Server Systems & Networking",
-    href: "/",
-  },
-  {
-    id: "02",
-    title: "Computer & Desktop Parts",
-    description:
-      "Authorized dealers for all desktop models and internal components. Whether it's a RAM upgrade or a custom build, we've got you covered.",
-    image: "/images/rn-infotech-37.webp",
-    btnText: "Computer & Desktop Parts",
-    href: "/",
-  },
-  {
-    id: "03",
-    title: "Mobile Parts & Accessories",
-    description:
-      "A comprehensive range of genuine parts for all major mobile brands.",
-    image: "/images/rn-infotech-57.webp",
-    btnText: "Mobile Parts & Accessories",
-    href: "/",
-  },
-];
 
 const Services = () => {
   const [isMounted, setIsMounted] = useState(false);
@@ -70,31 +42,27 @@ const Services = () => {
   return (
     <section
       ref={ref}
-      className="relative overflow-hidden py-8 px-6 sm:px-8 lg:py-12 lg:px-16 2xl:px-35"
-      style={{
-        background: 'linear-gradient(180deg, #fff5f0 0%, #ffffff 30%, #ffffff 70%, #fff8f5 100%)',
-      }}
-    >
+      className="bg-[image:var(--color-section-bg-service)] relative overflow-hidden py-8 px-6 sm:px-8 lg:py-12 lg:px-16 2xl:px-35">
       {/* Subtle warm gradient overlay */}
-      <div className="absolute top-0 left-0 right-0 h-[120px]"
+      {/* <div className="absolute top-0 left-0 right-0 h-[120px]"
         style={{
           background: 'linear-gradient(180deg, rgba(247, 109, 54, 0.08) 0%, transparent 100%)',
         }}
-      />
+      /> */}
 
       <div className={`relative z-10 flex flex-col items-center gap-4 mb-8 md:mb-10 transition-all duration-700 ease-out
         ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}>
         <div className="flex flex-col gap-2">
-          <Label label="What We Do" />
-          <H2 text="Expert Solutions for Home & Enterprise" />
+          <Label label={ServicesContent.label} />
+          <H2 text={ServicesContent.heading} />
         </div>
-        <H2Subtitle text="Reliable laptop & computer solutions — all under one roof." />
+        <H2Subtitle text={ServicesContent.subtitle} />
       </div>
 
       <div className="relative z-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-        {services.map((service, index) => (
+        {ServicesContent.cards.map((service, index) => (
           <ServiceCards
-            key={service.id}
+            key={index}
             service={service}
             index={index}
             isVisible={inView}
@@ -111,3 +79,7 @@ const Services = () => {
 };
 
 export default Services;
+
+// style={{
+//         background: 'linear-gradient(180deg, #fff5f0 0%, #ffffff 30%, #ffffff 70%, #fff8f5 100%)',
+//       }}

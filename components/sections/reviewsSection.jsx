@@ -6,45 +6,8 @@ import Label from "../ui/texts/Label";
 import H2 from "../ui/texts/H2";
 import H2Subtitle from "../ui/texts/H2Subtitle";
 import ReviewCard from "../ui/cards/ReviewCard";
+import { TestimonialsContent } from "@/cms/content/content";
 
-const reviews = [
-  {
-    id: 1,
-    name: "Rahul Sharma, Grant Road",
-    review:
-      '"RN Infotech fixed my laptop within 2 days! The staff was very helpful and explained everything clearly. Highly recommend them for any laptop repair in Mumbai."',
-  },
-  {
-    id: 2,
-    name: "Priya Desai, Dadar",
-    review:
-      '"I bought a second-hand laptop from here and it works perfectly. Great condition, fair price, and very honest dealings. Will definitely come back!"',
-  },
-  {
-    id: 3,
-    name: "Amit Patil, Bandra",
-    review:
-      '"Their home service is a lifesaver! The technician came on time, was very professional, and repaired my laptop right at my doorstep. Excellent experience."',
-  },
-  {
-    id: 4,
-    name: "Sneha Joshi, Worli",
-    review:
-      '"Been coming to RN Infotech for years. They are reliable, affordable, and never compromise on quality. Best laptop repair shop in Grant Road!"',
-  },
-  {
-    id: 5,
-    name: "Vikram Mehta, Andheri",
-    review:
-      '"Got my laptop screen replaced here. The work was neat, quick, and very reasonably priced. The staff was courteous and kept me updated throughout."',
-  },
-  {
-    id: 6,
-    name: "Pooja Nair, Chembur",
-    review:
-      '"Trustworthy and professional service. I was worried about giving my laptop for repair but RN Infotech made the whole process smooth and stress-free."',
-  },
-];
 
 const Reviews = () => {
   const [isMounted, setIsMounted] = useState(false);
@@ -82,25 +45,7 @@ const Reviews = () => {
   return (
     <section
       ref={ref}
-      className="relative overflow-hidden p-8 lg:py-12 lg:px-16 2xl:px-35"
-      style={{
-        background: 'linear-gradient(180deg, #ffffff 0%, #faf6f3 25%, #f5efe9 50%, #faf6f3 75%, #ffffff 100%)',
-      }}
-    >
-      {/* Decorative blobs */}
-      <div className="absolute top-[15%] right-[5%] w-[280px] h-[280px] rounded-full opacity-20 pointer-events-none"
-        style={{
-          background: 'radial-gradient(circle, rgba(247, 109, 54, 0.12) 0%, transparent 70%)',
-          filter: 'blur(70px)',
-        }}
-      />
-      <div className="absolute bottom-[20%] left-[8%] w-[220px] h-[220px] rounded-full opacity-18 pointer-events-none"
-        style={{
-          background: 'radial-gradient(circle, rgba(232, 100, 58, 0.1) 0%, transparent 70%)',
-          filter: 'blur(60px)',
-        }}
-      />
-
+      className="bg-[image:var(--color-section-bg-testimonials)] relative overflow-hidden p-8 lg:py-12 lg:px-16 2xl:px-35">
       <div className="relative z-10 flex flex-col gap-6 md:gap-8">
         {/* Header */}
         <div
@@ -108,15 +53,15 @@ const Reviews = () => {
             ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}
         >
           <div className="flex flex-col gap-2">
-            <Label label="Testimonials" />
-            <H2 text="What Our Customers Say" />
+            <Label label={TestimonialsContent.label} />
+            <H2 text={TestimonialsContent.heading} />
           </div>
-          <H2Subtitle text="Trusted by thousands of happy customers across Mumbai." />
+          <H2Subtitle text={TestimonialsContent.subtitle} />
         </div>
 
         {/* Review Cards */}
         <div className="flex flex-col md:flex-row md:flex-wrap gap-6 justify-center items-stretch">
-          {reviews.map((review, index) => (
+          {TestimonialsContent.cards.map((review, index) => (
             <ReviewCard
               key={review.id}
               review={review}
@@ -131,7 +76,7 @@ const Reviews = () => {
           className={`flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center transition-all duration-700 ease-out delay-700
             ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}
         >
-          <PrimaryBtn href="/" btnText="View Services" />
+          <PrimaryBtn href={TestimonialsContent.href} btnText={TestimonialsContent.btnText} />
         </div>
       </div>
     </section>
