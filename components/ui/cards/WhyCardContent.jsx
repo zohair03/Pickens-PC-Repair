@@ -13,7 +13,7 @@ const WhyCardContent = ({ card }) => (
       />
     </div>
     <div className="flex flex-col gap-3 items-start">
-      <p className="max-[380px]:text-sm text-bodytext text-base w-95/100 md:text-lg lg:text-xl xl:text-lg 2xl:text-xl">
+      <p className="max-[380px]:text-sm text-color-bodytext/80 text-base w-95/100 md:text-lg lg:text-xl xl:text-lg 2xl:text-xl">
         {card.text}
       </p>
       <Link

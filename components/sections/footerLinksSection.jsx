@@ -40,9 +40,15 @@ const FooterLinks = () => {
               href="/"
               className="logo-glow text-5xl lg:text-3xl xl:text-5xl text-red-500"
             >
-              <Link href="/" className="text-xl font-serif leading-relaxed text-[#7B52AB] tracking-tighter uppercase leading-none">
-
-                RN<br />Infotech
+              <Link href="/" className="flex flex-col items-center gap-2 text-2xl font-sans font-semibold tracking-widest text-white uppercase">
+                <Image
+                  src={BusinessInfo.Logo}
+                  alt="Repair IT MSP Logo"
+                  width={100}
+                  height={100}
+                  className="object-cover rounded-lg"
+                />
+                Repair IT MSP
               </Link>
             </Link>
           </div>
@@ -122,7 +128,7 @@ const FooterLinks = () => {
                   <Link
                     key={link.title + link.href}
                     href={link.href}
-                    className="text-white/80 hover:text-primary text-sm md:text-base transition-colors border-b border-white/10 pb-2"
+                    className="text-footer-form-text/80 hover:text-footer-form-text-hover text-sm md:text-base transition-colors border-b border-white/10 pb-2"
                   >
                     {link.title}
                   </Link>
@@ -133,7 +139,7 @@ const FooterLinks = () => {
                   <Link
                     key={i}
                     href={link.href}
-                    className="text-white/80 hover:text-primary text-sm md:text-base transition-colors border-b border-white/10 pb-2"
+                    className="text-footer-form-text/80 hover:text-footer-form-text-hover text-sm md:text-base transition-colors border-b border-white/10 pb-2"
                   >
                     {link.title}
                   </Link>
@@ -155,7 +161,7 @@ const FooterLinks = () => {
                   <Link
                     key={link.title + link.href}
                     href={link.href}
-                    className="text-white/80 hover:text-primary text-sm md:text-base transition-colors border-b border-white/10 pb-2"
+                    className="text-footer-form-text/80 hover:text-footer-form-text-hover text-sm md:text-base transition-colors border-b border-white/10 pb-2"
                   >
                     {link.title}
                   </Link>
@@ -172,17 +178,17 @@ const FooterLinks = () => {
               Contact Us
             </h4>
             <div className="flex flex-col gap-4">
-              <p className="text-white/80 text-sm md:text-base hover:text-white transition-colors">
+              <p className="text-footer-form-text/80 hover:text-footer-form-text-hover text-sm md:text-base transition-colors">
                 {BusinessInfo.PrimaryContactNumber}
               </p>
-              <p className="text-white/80 text-sm md:text-base hover:text-white transition-colors">
+              <p className="text-footer-form-text/80 hover:text-footer-form-text-hover text-sm md:text-base transition-colors">
                 {BusinessInfo.Email}
               </p>
               <a
                 href=""
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white/80 text-sm md:text-base leading-relaxed hover:text-white transition-colors"
+                className="text-footer-form-text/80 hover:text-footer-form-text-hover text-sm md:text-base leading-relaxed transition-colors"
               >
                 {BusinessInfo.Address}
               </a>
@@ -198,10 +204,10 @@ const FooterLinks = () => {
           licensors
         </p>
         <div className="flex flex-wrap justify-center gap-2 sm:gap-4 text-xs sm:text-sm text-white/70">
-          <Link href="/" className="hover:text-white transition-colors">
+          <Link href="/" className="hover:text-footer-form-text-hover transition-colors">
             Privacy Policy
           </Link>
-          <Link href="" className="hover:text-white transition-colors">
+          <Link href="" className="hover:text-footer-form-text-hover transition-colors">
             Do Not Sell/Share My Personal Information
           </Link>
         </div>

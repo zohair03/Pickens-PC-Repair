@@ -30,7 +30,7 @@ export const viewport = {
 }
 
 export const metadata = {
-  title: "RN Infotech",
+  title: "Repair IT MSP",
   description: "Computer reparing shop and refurbhish laptop selling",
 };
 

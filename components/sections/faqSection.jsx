@@ -8,7 +8,7 @@ import Label from "../ui/texts/Label";
 import FaqItem from "../ui/FaqItem";
 
 
-const Faqs = ({ image = "/images/rn-infotech-55.webp", faqs = [], label = "? FAQs", title = "Frequently Asked Questions" }) => {
+const Faqs = ({ image, faqs = [], label = "? FAQs", title = "Frequently Asked Questions" }) => {
   const [openId, setOpenId] = useState(null);
   const [isMounted, setIsMounted] = useState(false);
   const { ref, inView } = useInView({

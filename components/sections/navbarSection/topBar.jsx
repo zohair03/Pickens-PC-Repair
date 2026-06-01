@@ -43,11 +43,11 @@ const TopBar = ({ menuOpen, toggleMenu }) => {
               alt="Location"
               width={18}
               height={18}
-              className="[filter:var(--color-primary-btn-icon)] hover:[filter:var(--color-primary-btn-icon-hover)]"
+              className="[filter:var(--color-topbar-icon)]"
             />
-            <p className="text-[0.85rem] text-topbar-text font-medium">
+            <Link href={BusinessInfo.GoogleMaps} target="_blank" className="text-[0.85rem] text-topbar-text font-medium">
               Proudly Serving: <span className="font-bold">{BusinessInfo.ShortAddress}</span>
-            </p>
+            </Link>
           </div>
 
           {/* Phone */}
@@ -57,7 +57,7 @@ const TopBar = ({ menuOpen, toggleMenu }) => {
               alt="Phone"
               width={18}
               height={18}
-              className="[filter:var(--color-primary-btn-icon)] hover:[filter:var(--color-primary-btn-icon-hover)]"
+              className="[filter:var(--color-topbar-icon)]"
             />
             <p className="text-[0.85rem] text-topbar-text font-medium">
               Call or Text: <span className="font-bold">{BusinessInfo.PrimaryContactNumber}</span>

@@ -18,8 +18,8 @@ const StarRating = () => (
 const ReviewCardContent = ({ review }) => (
   <>
     <StarRating />
-    <p className="w-full sm:w-[85%] text-lg md:text-base">{review.review}</p>
-    <p className="font-bold text-lg md:text-base">- {review.name}</p>
+    <p className="text-color-bodytext/80 w-full sm:w-[85%] text-lg md:text-base">{review.review}</p>
+    <p className="text-color-bodytext/80 font-bold text-lg md:text-base">- {review.name}</p>
   </>
 );
 

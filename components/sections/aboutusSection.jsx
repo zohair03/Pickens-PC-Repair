@@ -57,7 +57,7 @@ const AboutUs = () => {
           </div>
 
           <div className="flex flex-col gap-6 w-full lg:w-1/2 text-center lg:text-left items-center lg:items-start">
-            <p className="max-[380px]:text-sm text-lg 2xl:text-xl text-start font-sans">
+            <p className="text-color-bodytext max-[380px]:text-sm text-lg 2xl:text-xl text-start font-sans">
               {AboutUsContent.description}
             </p>
           </div>

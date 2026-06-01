@@ -5,6 +5,7 @@ import SecondaryBtn from "../ui/buttons/secondaryBtn";
 import HeroHeading from "../ui/texts/HeroHeading";
 import HeroSubtitle from "../ui/texts/HeroSubtitle";
 import { GlassBtn } from "../ui/buttons/GlassBtn";
+import TertiaryBtn from "../ui/buttons/TertiaryBtn";
 import { hero } from "../../cms/content/content";
 
 
@@ -19,7 +20,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className={`${hero.bgImage} bg-cover bg-center h-[92vh] relative flex flex-col items-center justify-center max-[380px]:px-4 p-8 py-12 overflow-hidden bg-black`}>
+    <section className={`${hero.bgImage} bg-cover h-[94vh] bg-center relative flex flex-col items-center justify-center max-[380px]:px-4 p-8 py-12 overflow-hidden bg-black`}>
 
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/50 z-[1]" />
@@ -41,11 +42,10 @@ const Hero = () => {
                 ${isMounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}
           style={{ transitionDelay: "400ms" }}
         >
-          {/* <PrimaryBtn href={hero.href1} btnText={hero.btn1Text} custom="text-white" /> */}
           <SecondaryBtn href={hero.href1} btnText={hero.btn1Text} custom="border border-light-blue" />
-          <GlassBtn href={hero.href2} className="text-white flex items-center justify-center font-semibold gap-4 max-sm:mb-[0px]"> {hero.btn2Text} </GlassBtn>
+          <TertiaryBtn href={hero.href2} btnText={hero.btn2Text}/>
         </div>
-        
+
       </div>
     </section>
   );

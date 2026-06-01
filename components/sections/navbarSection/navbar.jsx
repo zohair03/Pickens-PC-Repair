@@ -12,6 +12,8 @@ import CallButton from "../../ui/buttons/callButton";
 import TertiaryBtn from "../../ui/buttons/TertiaryBtn";
 import { aboutLinks, servicesLinks } from "./navData";
 import BusinessInfo from "../../../cms/business Info/businessInfo"
+import { AboutUsContent } from "../../../cms/content/content";
+
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -95,8 +97,8 @@ const Navbar = () => {
 
   return (
     <nav className="">
-      <div 
-        className="top-0 inset-x-0 fixed z-50 font-sans" 
+      <div
+        className="top-0 inset-x-0 fixed z-50 font-sans"
         ref={navbarRef}
       >
         {/* Row 1: TopBar (Responsive logic inside TopBar) */}
@@ -104,13 +106,18 @@ const Navbar = () => {
 
         {/* Row 2 (Desktop) / Rows 2 & 3 (Mobile) */}
         <div className="liquid-glass-strong-light bg-black/20 rounded-b-xl mx-1 relative px-4 md:px-8 2xl:px-30 py-4 lg:py-3">
-          
+
           {/* Desktop Layout */}
           <div className="hidden lg:flex justify-between items-center" onMouseLeave={closeMega}>
             {/* Logo */}
-            <Link href="/" className="text-xl font-serif leading-relaxed text-[#7B52AB] tracking-tighter uppercase leading-none">
-              {/* {BusinessInfo.Logo} */}
-              RN<br />Infotech
+            <Link href="/" className="text-xl font-serif leading-relaxed text-primary tracking-tighter uppercase leading-none">
+              <Image
+                src={BusinessInfo.Logo}
+                alt="Repair IT MSP Logo"
+                width={80}
+                height={80}
+                className="object-cover rounded-lg"
+              />
             </Link>
 
             {/* Desktop Nav Links */}
@@ -119,21 +126,25 @@ const Navbar = () => {
             </div>
 
             {/* CTA Button */}
-            <PrimaryBtn btnText="Contact Us" custom=""/>
+            <PrimaryBtn btnText="Contact Us" custom="" />
           </div>
 
           {/* Mobile Layout */}
           <div className="lg:hidden flex justify-between items-center gap-3">
             {/* Mobile Logo (Centered) */}
             <div className="flex justify-center">
-              <Link href="/" className="text-sm md:text-lg leading-relaxed font-serif font-black text-[#7B52AB] tracking-tighter uppercase leading-none text-center">
-                RN<br />Infotech
-              </Link>
+              <Image
+                src={BusinessInfo.Logo}
+                alt="Repair IT MSP Logo"
+                width={70}
+                height={70}
+                className="object-cover rounded-lg"
+              />
             </div>
 
             {/* Mobile Buttons (Side by Side) */}
             <div className="flex flex-col items-center justify-center gap-3">
-              <CallButton btnText="Call Us Now" custom={{ paddingInline: 'calc(var(--spacing) * 2)', width: '175px' }}/>
+              <CallButton btnText="Call Us Now" custom={{ paddingInline: 'calc(var(--spacing) * 2)', width: '175px' }} />
               {/* <TertiaryBtn btnText="Contact Us" custom="sm:w-fit" /> */}
             </div>
           </div>

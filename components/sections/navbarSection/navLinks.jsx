@@ -22,13 +22,13 @@ const NavLinks = ({ activeMega, setActiveMega }) => {
         >
           <Link
             href={link.href}
-            className="relative text-white text-shadow-lg text-base font-semibold no-underline py-1 transition-colors duration-200 hover:text-[#7B52AB] group"
+            className="relative text-navbar-link hover:text-navbar-link-hover text-shadow-lg text-base font-semibold no-underline py-1 transition-colors duration-200 group"
           >
             {link.title}
           </Link>
           {link.mega && (
             <svg
-              className={`w-3.5 h-3.5 text-white transition-all duration-200 group-hover:text-[#7B52AB] ${
+              className={`w-3.5 h-3.5 text-navbar-link transition-all duration-200 group-hover:text-navbar-link-hover ${
                 activeMega === link.mega ? "rotate-180" : ""
               }`}
               fill="none"

@@ -1,7 +1,9 @@
 'use client';
 import React, { useState, useEffect } from "react";
 import SecondaryBtn from "../ui/buttons/secondaryBtn";
+import TertiaryBtn from "../ui/buttons/TertiaryBtn";
 import CallButton from "../ui/buttons/callButton";
+import { GlassBtn } from "../ui/buttons/GlassBtn";
 import { useInView } from "react-intersection-observer";
 import Label from "../ui/texts/Label";
 import FinalCtaH2 from "../ui/texts/FinalCtaH2";
@@ -20,7 +22,7 @@ const FinalCta = ({
   height = "min-sm:h-[70vh]",
   headingFontSize,
 }) => {
-  
+
   const [isMounted, setIsMounted] = useState(false);
   const { ref, inView } = useInView({
     threshold: 0.1,
@@ -55,8 +57,8 @@ const FinalCta = ({
           className={`flex flex-col lg:gap-4 text-center items-center transition-all duration-700 ease-out
             ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}
         >
-          <Label label={label} custom="text-white mb-[-12px]" />
-          <FinalCtaH2 text={title} custom={`${headingFontSize}`} />
+          <Label label={label} custom="text-white mb-1 lg:mb-[-12px]" />
+          <FinalCtaH2 text={title} custom={`${headingFontSize} leading-relaxed`} />
           <FinalCtaSubtitle text={subtitle} />
         </div>
 
@@ -66,17 +68,11 @@ const FinalCta = ({
             ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}
         >
           <CallButton btnText={cta1} />
-          <SecondaryBtn
-            custom={"border border-light-blue"}
-            href={href2}
-            btnText={cta2}
-          />
+          <TertiaryBtn href={href2} btnText={cta2} />
         </div>
-
       </div>
     </section>
   );
 };
-;
 
 export default FinalCta;

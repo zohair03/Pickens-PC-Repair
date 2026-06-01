@@ -19,7 +19,7 @@ export default function Home() {
       <AboutUs />
       <WhyChooseUs />
       <Reviews />
-      <Faqs faqs={FaqsContent.questions} />
+      <Faqs image={FaqsContent.image} faqs={FaqsContent.questions} />
       <FinalCta />
     </main>
   );

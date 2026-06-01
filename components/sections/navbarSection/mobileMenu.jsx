@@ -23,7 +23,7 @@ const MobileMenu = ({ closeMenu, isClosing }) => {
         {/* Home */}
         <Link
           href="/"
-          className="w-full text-center py-3 hover:text-primary transition-colors"
+          className="text-navbar-link hover:text-navbar-link-hover w-fit text-center py-3 transition-colors"
         >
           HOME
         </Link>
@@ -33,13 +33,13 @@ const MobileMenu = ({ closeMenu, isClosing }) => {
           <div className="flex items-center justify-center gap-2">
             <Link
               href="/"
-              className="py-3 hover:text-primary transition-colors"
+              className="text-navbar-link hover:text-navbar-link-hover py-3 transition-colors"
             >
               ABOUT
             </Link>
             <button
               onClick={() => setAboutOpen(!aboutOpen)}
-              className="p-2 hover:text-primary transition-colors"
+              className="p-2 hover:text-navbar-link-hover transition-colors"
             >
               <svg
                 className={`w-4 h-4 transition-transform duration-200 ${aboutOpen ? "rotate-180" : ""}`}
@@ -59,7 +59,7 @@ const MobileMenu = ({ closeMenu, isClosing }) => {
                 <Link
                   key={link.title}
                   href={link.href}
-                  className="text-base font-normal text-white/90 hover:text-primary transition-colors py-1"
+                  className="text-base font-normal text-navbar-link hover:text-navbar-link-hover transition-colors py-1"
                 >
                   {link.title}
                 </Link>
@@ -75,13 +75,13 @@ const MobileMenu = ({ closeMenu, isClosing }) => {
             <Link
               href="/"
               onClick={closeMenu}
-              className="py-3 hover:text-primary transition-colors"
+              className="py-3 text-navbar-link hover:text-navbar-link-hover transition-colors"
             >
               SERVICES
             </Link>
             <button
               onClick={() => setServicesOpen(!servicesOpen)}
-              className="p-2 hover:text-primary transition-colors"
+              className="p-2 hover:text-navbar-link-hover transition-colors"
             >
               <svg
                 className={`w-4 h-4 transition-transform duration-200 ${servicesOpen ? "rotate-180" : ""}`}
@@ -101,7 +101,7 @@ const MobileMenu = ({ closeMenu, isClosing }) => {
                 <Link
                   key={link.title}
                   href={link.href}
-                  className="text-base font-normal text-white/90 hover:text-primary transition-colors py-1"
+                  className="text-base font-normal text-navbar-link hover:text-navbar-link-hover transition-colors py-1"
                 >
                   {link.title}
                 </Link>
@@ -114,7 +114,7 @@ const MobileMenu = ({ closeMenu, isClosing }) => {
         {/* Gallery */}
         <Link
           href="/"
-          className="w-full text-center py-3 hover:text-primary transition-colors"
+          className="w-full text-center py-3 text-navbar-link hover:text-navbar-link-hover transition-colors"
         >
           GALLERY
         </Link>
@@ -122,7 +122,7 @@ const MobileMenu = ({ closeMenu, isClosing }) => {
         {/* Contact */}
         <Link
           href="/"
-          className="w-full text-center py-3 hover:text-primary transition-colors"
+          className="w-full text-center py-3 text-navbar-link hover:text-navbar-link-hover transition-colors"
         >
           CONTACT
         </Link>
