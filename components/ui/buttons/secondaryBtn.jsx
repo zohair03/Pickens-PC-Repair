@@ -13,7 +13,7 @@ const sharedClasses = `
   min-w-[90%] md:min-w-[220px] min-h-[50px]
   flex items-center justify-center
   relative overflow-hidden
-  btn-border-glow btn-press hover:scale-105 active:scale-95
+  btn-border-glow liquid-glass-btn btn-press hover:scale-105 active:scale-95
 `;
 
 const SecondaryBtn = ({ btnText, href, custom }) => {

@@ -10,7 +10,7 @@ const FaqItem = ({ faq, isOpen, onToggle, index, isVisible }) => (
   >
     <div className="glass-content flex justify-between items-start gap-4">
       <FaqItemContent faq={faq} isOpen={isOpen} />
-      <div className="bg-plus-bg flex-shrink-0 w-8 h-8 md:w-10 md:h-10 rounded-full  flex items-center justify-center transition-transform duration-300">
+      <div className="bg-plus-bg liquid-glass-strong-light btn-press hover:scale-105 active:scale-95 flex-shrink-0 w-8 h-8 md:w-10 md:h-10 rounded-full  flex items-center justify-center transition-transform duration-300">
         <span className="text-plus-icon text-xl font-light leading-none">
           {isOpen ? "−" : "+"}
         </span>

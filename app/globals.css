@@ -427,7 +427,7 @@
   --color-why-card-icon: brightness(0) invert(1);
 
   --color-plus-icon: #ffffff;
-  --color-plus-bg: #6f0804;
+  --color-plus-bg: var(--color-primary);
 
   --color-footer-form-bg: #101724;
   --color-footer-form-text: #ffffff;
