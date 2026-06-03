@@ -1,16 +1,22 @@
 const BusinessInfo = {
-    Logo: "/images/logo.png",
-    PrimaryContactNumber: "+150-289-18961",
+    Logo: "",
+    isLogo: false,
+    BusinessName: "Pickens PC Repair",
+    PrimaryContactNumber: "+1 205-774-8415",
     SecondaryContactNumber: "123456789",
-    Email: "contact.us@repairit.support",
-    ShortAddress: "508 Executive Park, Louisville, KY",
-    Address: "508 Executive Park, Louisville, KY 40207, United States",
-    GoogleMaps: "https://www.google.com/maps/place/Repair+IT+MSP/@38.2420848,-85.6260396,761m/data=!3m3!1e3!4b1!5s0x8869753626f34b13:0x501b7701071dbcc3!4m6!3m5!1s0x8869753622bd7301:0xb4050dc3d95c70dc!8m2!3d38.2420848!4d-85.6234647!16s%2Fg%2F11b6gdthwl?entry=ttu&g_ep=EgoyMDI2MDUyNy4wIKXMDSoASAFQAw%3D%3D",
-    Address2: "508 Executive Park, Louisville, KY 40207, United States",
+    Email: "info@pickenspcrepair.com",
+    ShortAddress: "Homewood, AL",
+    Address: "244 Goodwin Crest Dr Ste 111, Homewood, AL, United States, 35209",
+    GoogleMaps: "https://maps.google.com/?q=244+Goodwin+Crest+Dr+Ste+111,+Homewood,+AL+35209",
+    Address2: "244 Goodwin Crest Dr Ste 111, Homewood, AL, United States, 35209",
     BusinessHours: [
         {
-            Day: "Mon-Fri",
-            Timing: "10:00 AM - 06:00 PM",
+            Day: "Mon-Thu",
+            Timing: "9:00 AM - 5:30 PM",
+        },
+        {
+            Day: "Fri",
+            Timing: "9:00 AM - 5:00 PM",
         },
         {
             Day: "Sat-Sun",
@@ -18,12 +24,12 @@ const BusinessInfo = {
         }
     ],
     SocialMedia: {
-        Instagram: "https://www.instagram.com/",
-        Facebook: "https://www.facebook.com/repairIT.support/",
+        Instagram: "https://www.instagram.com/pickenspcrepairllc/",
+        Facebook: "https://www.facebook.com/LionelPickens2021/",
         X: "https://www.x.com/",
-        Linkedin: "https://www.linkedin.com/company/repair-it-support/",
+        Linkedin: "https://www.linkedin.com/in/ppr82/",
         Youtube: "https://www.youtube.com/",
-        GMB: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3313.1429968655248!2d-85.62603962389838!3d38.24208477187135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8869753622bd7301%3A0xb4050dc3d95c70dc!2sRepair%20IT%20MSP!5e1!3m2!1sen!2sin!4v1780226839093!5m2!1sen!2sin"
+        GMB: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3518.802398347841!2d-86.83284809999999!3d33.4720083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8889235abe10577b%3A0x2f4bef4ab1043af5!2sPickens%20PC%20Repair%20LLC!5e1!3m2!1sen!2sin!4v1780426364966!5m2!1sen!2sin"
     }
 }
 

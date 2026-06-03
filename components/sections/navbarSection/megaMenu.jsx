@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 
+
 const MegaMenu = ({ items, isClosing, navbarBottom, onMouseEnter, onMouseLeave }) => {
   const [mounted, setMounted] = useState(false);
 
@@ -28,7 +29,7 @@ const MegaMenu = ({ items, isClosing, navbarBottom, onMouseEnter, onMouseLeave }
   return createPortal(
     <div
       style={{ top: navbarBottom }}
-      className={`liquid-glass-strong-light mt-[-5px] mx-2 rounded-b-xl inset-x-0 fixed left-0 z-[45] ${
+      className={`liquid-glass-strong-light backdrop-blur-[5px]! mt-[-5px] mx-2 rounded-b-xl inset-x-0 fixed left-0 z-[45] ${
         isClosing ? "animate-slideUp" : "animate-slideDown"
       }`}
       onMouseEnter={onMouseEnter}

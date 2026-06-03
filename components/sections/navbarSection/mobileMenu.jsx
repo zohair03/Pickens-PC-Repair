@@ -4,6 +4,7 @@ import CallButton from "../../ui/buttons/callButton";
 import { useState } from "react";
 import { aboutLinks, servicesLinks } from "./navData";
 
+
 const MobileMenu = ({ closeMenu, isClosing }) => {
   const [aboutOpen, setAboutOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
@@ -15,7 +16,7 @@ const MobileMenu = ({ closeMenu, isClosing }) => {
 
       {/* Menu Panel — Liquid Glass */}
       <div
-        className={`liquid-glass-strong-light mx-2 mt-[-5px] z-[-1] rounded-b-xl relative lg:hidden flex flex-col items-center gap-2 py-8 text-white font-semibold text-lg ${
+        className={`liquid-glass-strong-light backdrop-blur-[1px]! mx-2 mt-[-5px] z-[-1] rounded-b-xl relative lg:hidden flex flex-col items-center gap-2 py-8 text-white font-semibold text-lg ${
           isClosing ? "animate-slideUp" : "animate-slideDown"
         }`}
         style={{ maxHeight: "75vh", overflowY: "auto" }}

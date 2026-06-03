@@ -378,79 +378,80 @@
   --font-serif: var(--font-boldonse);
   --font-bitcount: var(--font-bitcount-single);
 
-  --color-primary: #DA1A11;
-  --color-secondary: #FF6B5B;
+  --color-primary: #002D62;
+  --color-secondary: #70C9F9;
 
-  --color-color-herotext: #ffffff;
-  --color-color-headings: #1A0402;
-  --color-color-h3: #5C1A15;
-  --color-color-bodytext: #000000;
-  --color-color-default: #000000;
+  --color-color-herotext: #FFFFFF;
+  --color-color-headings: #0A192F;
+  --color-color-h3: #1E3A8A;
+  --color-color-bodytext: #111111;
+  --color-color-default: #111111;
 
-  --color-primary-btn: #DA1A11;
-  --color-primary-btn-hover: #8C1009;
+  --color-primary-btn: #002D62;
+  --color-primary-btn-hover: #001F44;
   --color-primary-btn-text: #FFFFFF;
   --color-primary-btn-text-hover: #FFFFFF;
   --color-primary-btn-icon: brightness(0) invert(1);
   --color-primary-btn-icon-hover: brightness(0) invert(1);
 
-  --color-secondary-btn: #DA1A11;
-  --color-secondary-btn-hover: #8C1009;
-  --color-secondary-btn-text: #FFF0EF;
-  --color-secondary-btn-text-hover: #FFF0EF;
-  --color-secondary-btn-br1-color: #FFB3AC;
-  --color-secondary-btn-br2-color: #FFF0EF;
+  --color-secondary-btn: #70C9F9;
+  --color-secondary-btn-hover: #45B6F7;
+  --color-secondary-btn-text: #002D62;
+  --color-secondary-btn-text-hover: #001F44;
+  --color-secondary-btn-br1-color: #BBE5FC;
+  --color-secondary-btn-br2-color: #FFFFFF;
 
-  --color-marquee-text: #ffffff;
-  --color-marquee-text-shadow-1: #ffffff;
-  --color-marquee-text-shadow-2: #ffffff;
-  --color-marquee-text-shadow-3: #ffffff;
+  --color-marquee-text: #FFFFFF;
+  --color-marquee-text-shadow-1: #70C9F9;
+  --color-marquee-text-shadow-2: #002D62;
+  --color-marquee-text-shadow-3: #0A192F;
   --color-marquee-bg: #000000;
 
-  --color-label-text: #6f0804;
+  --color-label-text: var(--color-primary);
 
-  --color-topbar-bg: #ffffff;
-  --color-topbar-text: #000000;
-  --color-topbar-text-hover: #FF9A90;
-  --color-topbar-icon: brightness(0) saturate(100%) invert(17%) sepia(52%) saturate(7039%) hue-rotate(12deg) brightness(91%) contrast(108%);
+  --color-topbar-bg: ;
+  --color-topbar-text: #111111;
+  --color-topbar-text-hover: #70C9F9;
+  /* Formulated to generate #002D62 precisely from a black icon asset */
+  --color-topbar-icon: brightness(0) saturate(100%) invert(13%) sepia(35%) saturate(5441%) hue-rotate(204deg) brightness(92%) contrast(103%);
 
-  --color-navbar-link: #ffffff;
-  --color-navbar-link-hover: #c6c6c6;
+  --color-navbar-link: #FFFFFF;
+  --color-navbar-link-hover: #70C9F9;
 
   --color-iridescent-border: var(--color-primary);
-  --color-iridescent-border-shade-1: #FF9A90;
-  --color-iridescent-border-shade-2: #FFD6D3;
-  --color-iridescent-border-dark-shade: #8C1009;
+  --color-iridescent-border-shade-1: #70C9F9;
+  --color-iridescent-border-shade-2: #E0F4FE;
+  --color-iridescent-border-dark-shade: #001F44;
 
-  --color-icon-primary: brightness(0) saturate(100%) invert(18%) sepia(90%) saturate(3500%) hue-rotate(350deg) brightness(85%) contrast(115%);
-  --color-why-card-icon-bg: #1a253a;
+  /* Formulated to generate #002D62 precisely from a black icon asset */
+  --color-icon-primary: brightness(0) saturate(100%) invert(13%) sepia(35%) saturate(5441%) hue-rotate(204deg) brightness(92%) contrast(103%);
+  --color-why-card-icon-bg: #0A192F;
   --color-why-card-icon: brightness(0) invert(1);
 
-  --color-plus-icon: #ffffff;
+  --color-plus-icon: #FFFFFF;
   --color-plus-bg: var(--color-primary);
 
-  --color-footer-form-bg: #101724;
-  --color-footer-form-text: #ffffff;
-  --color-footer-form-text-hover: #e66c66;
-  --color-footer-form-floating-orb: rgba(41, 89, 178, 0.15);
+  --color-footer-form-bg: #030F26;
+  --color-footer-form-text: #FFFFFF;
+  --color-footer-form-text-hover: #70C9F9;
+  --color-footer-form-floating-orb: rgba(112, 201, 249, 0.12);
   --color-footer-form-icon: brightness(0) invert(1);
-  --color-footer-form-placeholder-border: #ffffff;
+  --color-footer-form-placeholder-border: #475569;
 
-  --color-footer-bg: #101724;
-  --color-footer-text: #ffffff;
+  --color-footer-bg: #030F26;
+  --color-footer-text: #E2E8F0;
 
-  --color-section-bg: ;
-  --color-section-bg-service: linear-gradient(to bottom, #ffffff, #94a3b8);
-  --color-section-bg-aboutus: linear-gradient(to bottom, #94a3b8, #ffffff);
-  --color-section-bg-testimonials: linear-gradient(to bottom, #94a3b8, #ffffff);
-  --color-section-bg-whychooseus: linear-gradient(to bottom, #ffffff, #94a3b8);
-  --color-section-bg-faqs: linear-gradient(to bottom, #ffffff, #94a3b8);
+  --color-section-bg: #FFFFFF;
+  --color-section-bg-service: linear-gradient(to bottom, #FFFFFF, #E0F2FE);
+  --color-section-bg-aboutus: linear-gradient(to bottom, #E0F2FE, #FFFFFF);
+  --color-section-bg-testimonials: linear-gradient(to bottom, #F0F9FF, #E0F2FE);
+  --color-section-bg-whychooseus: linear-gradient(to bottom, #FFFFFF, #F0F9FF);
+  --color-section-bg-faqs: linear-gradient(to bottom, #E0F2FE, #FFFFFF);
 
-  /* --color-section-bg-service: linear-gradient(to bottom, #ffffff, #e9ecef);
-  --color-section-bg-aboutus: linear-gradient(to bottom, #e9ecef, #ffffff);
-  --color-section-bg-testimonials:  linear-gradient(to bottom, #e9ecef, #ffffff);
-  --color-section-bg-whychooseus: linear-gradient(to bottom, #ffffff, #e9ecef);
-  --color-section-bg-faqs: linear-gradient(to bottom, #ffffff, #e9ecef); */
+
+
+
+
 
   --text-h1: 4rem;
   --text-h2: 1.5rem;

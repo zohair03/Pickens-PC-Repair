@@ -1,5 +1,6 @@
 import { Bitcount_Single, Boldonse, Roboto } from "next/font/google";
 import "./globals.css";
+import BusinessInfo from "@/cms/business Info/businessInfo";
 import Navbar from "@/components/sections/navbarSection/navbar";
 import Footer from "@/components/sections/footer";
 
@@ -30,7 +31,7 @@ export const viewport = {
 }
 
 export const metadata = {
-  title: "Repair IT MSP",
+  title: BusinessInfo.BusinessName,
   description: "Computer reparing shop and refurbhish laptop selling",
 };
 

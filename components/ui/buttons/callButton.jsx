@@ -65,7 +65,7 @@ const CallButton = ({btnText, custom, disabled}) => {
           alt="Call icon"
           width={20}
           height={20}
-          className="icon-color"
+          className="[filter:var(--color-primary-btn-icon)] hover:[filter:var(--color-primary-btn-icon-hover)]"
         />
         <div className="shimmer" />
         {btnText}

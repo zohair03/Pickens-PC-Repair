@@ -16,9 +16,9 @@ const quickLinks2 = [
 ];
 
 const servicesLinks1 = [
-  { title: "Laptop Repair", href: "/" },
-  { title: "Second Hand Laptops", href: "/" },
-  { title: "Ram & Storage Upgrade", href: "/" },
+  { title: "PC & Mac Repairs", href: "/" },
+  { title: "Data Backup & Recovery", href: "/" },
+  { title: "Computer Networking", href: "/" },
 ];
 
 const servicesLinks2 = [];
@@ -40,15 +40,14 @@ const FooterLinks = () => {
               href="/"
               className="logo-glow text-5xl lg:text-3xl xl:text-5xl text-red-500"
             >
-              <Link href="/" className="flex flex-col items-center gap-2 text-2xl font-sans font-semibold tracking-widest text-white uppercase">
-                <Image
+              <Link href="/" className="flex flex-col items-center">
+                {BusinessInfo.isLogo ? (<Image
                   src={BusinessInfo.Logo}
                   alt="Repair IT MSP Logo"
                   width={100}
                   height={100}
                   className="object-cover rounded-lg"
-                />
-                Repair IT MSP
+                />) : (<p className="text-3xl font-bold leading-none text-center tracking-widest text-white tracking-widest uppercase">Pickens<br />PC Repair</p>)}
               </Link>
             </Link>
           </div>

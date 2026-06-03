@@ -1,18 +1,18 @@
 export const hero = {
     heading: "Premier Computer Repair & IT Support Services",
-    subtitle: "Repair IT MSP stands out as your local trusted partner for expert hardware repairs, software troubleshooting, data recovery, and comprehensive IT services.",
+    subtitle: "Pickens PC Repair LLC stands out as your local trusted partner for expert hardware repairs, software troubleshooting, data recovery, and comprehensive IT services.",
     btn1Text: "View Services",
     href1: "/",
     btn2Text: "Schedule Now",
     href2: "/",
-    bgImage: "bg-[url('/images/image-6.webp')]",
+    bgImage: "bg-[url('/images/image3.webp')]",
 }
 
 export const MarqueeText = [
     "Fast, reliable, and local IT services!",
     "Call us at +150-289-18961 for support",
     "Expert diagnostics and transparent pricing!",
-    "Visit us at 508 Executive Park, Louisville, KY",
+    "Visit us at 244 Goodwin Crest Dr, Homewood, AL",
     "Your trusted community computer repair experts!",
 ]
 
@@ -23,29 +23,56 @@ export const ServicesContent = {
     cards: [
         {
             id: "01",
-            title: "In-Store Repairs",
+            title: "PC & Mac Repairs",
             description:
-                "Service plans cover any labor or services we offer for no additional charge for the duration of the plan, including Remote support.",
-            image: "/images/rn-infotech-30.webp",
-            btnText: "In-Store Repairs",
+                "Comprehensive diagnostic and repair services for laptops, desktops, and all-in-one systems. We handle screen replacements, battery issues, and hardware fixes.",
+            image: "/images/rn-infotech-57.webp",
+            btnText: "Computer Repairs",
             href: "/",
         },
         {
             id: "02",
-            title: "On-Site Services",
+            title: "On-Site & In-Home Support",
             description:
-                "Our On-Site hourly rate is $79. We will come to your home or place of business for any computer repair, setup, or troubleshooting needs.",
-            image: "/images/rn-infotech-37.webp",
-            btnText: "On-Site Services",
+                "Our technicians will come directly to your home or office for troubleshooting, computer setup, networking, or device installations at affordable rates.",
+            image: "/images/rn-infotech-30.webp",
+            btnText: "On-Site Support",
             href: "/",
         },
         {
             id: "03",
-            title: "Security Cameras and Surveillance Systems",
+            title: "Virus & Malware Removal",
             description:
-                "Security cameras have become more affordable over recent years and there are many types of cameras with advanced features to secure your property.",
-            image: "/images/image-11.webp",
-            btnText: "Security Cameras & Surveillance",
+                "Thorough spyware, ransomware, and virus scanning and removal. We help clean infected operating systems and install preventative protection tools.",
+            image: "/images/image10.webp",
+            btnText: "Virus Removal",
+            href: "/",
+        },
+        {
+            id: "04",
+            title: "Data Backup & Recovery",
+            description:
+                "Safe retrieval of your documents, photos, and crucial business data from failed hard drives. We also configure secure local and cloud backup systems.",
+            image: "/images/image7.webp",
+            btnText: "Data Services",
+            href: "/",
+        },
+        {
+            id: "05",
+            title: "Computer Networking",
+            description:
+                "Reliable setup and troubleshooting of home office or business Wi-Fi, routers, modems, switches, and secure remote VPN connections.",
+            image: "/images/image6.webp",
+            btnText: "Networking Support",
+            href: "/",
+        },
+        {
+            id: "06",
+            title: "System Tune-Ups & Upgrades",
+            description:
+                "Speed up slow machines with SSD installations, RAM additions, OS reinstalls, and regular dust and thermal compound maintenance.",
+            image: "/images/rn-infotech-38.webp",
+            btnText: "Tune-Ups & Upgrades",
             href: "/",
         },
     ]
@@ -53,8 +80,8 @@ export const ServicesContent = {
 
 export const AboutUsContent = {
     label: "Who We Are",
-    heading: "About Repair IT MSP",
-    description: "Repair IT MSP stands out as a premier destination for computer repair and IT services, earning its reputation through a combination of exceptional customer service and technical expertise. With a dedicated team of knowledgeable professionals, we are recognized for our quick response times and ability to effectively diagnose and resolve a range of computer issues, from hardware repairs to software troubleshooting. Whether addressing a simple fix or a complex repair, Repair IT MSP continues to set the standard for outstanding IT support in the community.",
+    heading: "About Pickens PC Repair LLC",
+    description: "Pickens PC Repair LLC is a computer support company that specializes in PC repair & Mac repair services. We also specialize in computer networking, data back-up and recovery, virus removal, and other installation services. Many computer repair service companies in nearby towns offer technology services, but as a local computer consulting company, Pickens PC Repair LLC will tailor a solution for your in-home computer repair needs or computer networking support in your office. As a local business, we understand that you want a reliable technology support company that provides quality work at affordable prices. To keep computer repair costs down, we recommend PC maintenance and tune ups to help with virus and spyware prevention. If you suspect you may already have a problem, we can start with a cost-effective computer solution. As a computer owner, you already know that sometimes operating systems just need to be replaced. If that's the case, we'll help you find the best machine.",
     btnText: "Contact Us",
     href: "/",
     image1: "/images/rn-infotech-31.webp",
@@ -63,7 +90,7 @@ export const AboutUsContent = {
 
 export const WhyChooseUsContent = {
     label: "Why Us",
-    heading: "Why Tech Professionals Choose Repair IT MSP",
+    heading: "Why Tech Professionals Choose Pickens PC Repair",
     btnText: "Schedule a Repair",
     href: "/",
     cards: [
@@ -94,45 +121,45 @@ export const WhyChooseUsContent = {
 export const TestimonialsContent = {
     label: "Testimonials",
     heading: "What Our Customers Say",
-    subtitle: "Trusted by local clients in Louisville, Kentucky and surrounding areas",
+    subtitle: "Trusted by local clients in Homewood, Alabama and surrounding areas",
     btnText: "View Services",
     href: "/",
     cards: [
         {
             id: 1,
-            name: "Sarah Jenkins, Louisville",
+            name: "Sarah Jenkins, Homewood",
             review:
-                '"Repair IT MSP is a lifesaver! They replaced my laptop screen in no time and explained everything so clearly. Excellent customer service and fair pricing!"',
+                '"Pickens PC Repair is a lifesaver! They replaced my laptop screen in no time and explained everything so clearly. Excellent customer service and fair pricing!"',
         },
         {
             id: 2,
-            name: "David Miller, St. Matthews",
+            name: "David Miller, Mountain Brook",
             review:
                 '"I needed an urgent data recovery for my business laptop, and their team got it done overnight. Highly professional and very reassuring throughout the process."',
         },
         {
             id: 3,
-            name: "Linda Thompson, Highlands",
+            name: "Linda Thompson, Vestavia Hills",
             review:
-                '"The on-site tech who set up our home office network and security cameras was fantastic. Arrived right on time, extremely polite, and the $79 hourly rate was very reasonable!"',
+                '"The on-site tech who set up our home office network and resolved our Wi-Fi issues was fantastic. Arrived right on time, extremely polite, and the pricing was very reasonable!"',
         },
         {
             id: 4,
-            name: "James Carter, Louisville",
+            name: "James Carter, Birmingham",
             review:
-                '"I love that they take the time to educate you on the problem rather than just handing you a bill. Best place in Louisville for honest and reliable computer repair."',
+                '"I love that they take the time to educate you on the problem rather than just handing you a bill. Best place in Alabama for honest and reliable computer repair."',
         },
         {
             id: 5,
-            name: "Emily Rodriguez, Middletown",
+            name: "Emily Rodriguez, Hoover",
             review:
-                '"Had a major virus issue that locked me out of my desktop. The technicians at Repair IT MSP diagnosed and cleaned it up quickly. Highly recommend their services!"',
+                '"Had a major virus issue that locked me out of my desktop. The technicians at Pickens PC Repair diagnosed and cleaned it up quickly. Highly recommend their services!"',
         },
         {
             id: 6,
-            name: "Robert Chen, Louisville",
+            name: "Robert Chen, Homewood",
             review:
-                '"Their in-store repair plan is an absolute steal. They\'ve handled all my hardware upgrades and software troubleshooting with top-tier professionalism and quick turnarounds."',
+                '"Their PC maintenance and tune-ups are top tier. They\'ve handled all my hardware upgrades and software troubleshooting with absolute professionalism and quick turnarounds."',
         }
     ]
 }
@@ -140,30 +167,30 @@ export const TestimonialsContent = {
 export const FaqsContent = {
     label: "FAQs",
     heading: "Frequently Asked Questions",
-    image: "/images/image.webp",
+    image: "/images/image5.webp",
     questions: [
         {
             id: 1,
-            question: "What is your hourly rate for on-site services?",
+            question: "What services do you offer for on-site support?",
             answer:
-                "Our on-site service rate is $79 per hour. We come directly to your home or place of business to troubleshoot, set up networking, or resolve computer issues.",
+                "We come directly to your home or office for computer repair, network setup, troubleshooting, or hardware installation in Homewood, AL and surrounding areas.",
         },
         {
             id: 2,
-            question: "Do you offer in-store repair plans?",
+            question: "Do you repair both PCs and Macs?",
             answer:
-                "Yes! Our in-store service plans cover all labor and services for no additional charge for the duration of the plan, including remote support.",
+                "Yes! Pickens PC Repair LLC specializes in both PC repair & Mac repair services, ensuring your device gets expert care regardless of the platform.",
         },
         {
             id: 3,
-            question: "Can you install security cameras and surveillance systems?",
+            question: "How do you help keep computer repair costs down?",
             answer:
-                "Absolutely. Security cameras have become much more affordable, and we offer installation for various types of advanced surveillance systems to secure your property.",
+                "We recommend regular PC maintenance and tune-ups to prevent virus and spyware infections. If you already have a problem, we start with cost-effective diagnostic and repair solutions.",
         },
         {
             id: 4,
-            question: "Do you handle data recovery and security updates?",
-            answer: "Yes, we offer a comprehensive range of IT services including data recovery, security updates, hardware upgrades, and operating system troubleshooting.",
+            question: "Can you help with operating system replacement or selecting a new computer?",
+            answer: "Absolutely. If your operating system needs replacement or your machine is too old, we can install a clean OS or help you select and set up the best new machine for your needs.",
         },
     ],
     btnText: "Have More Questions?",
@@ -173,10 +200,10 @@ export const FaqsContent = {
 export const FinalCtaContent = {
     label: "Get In Touch",
     heading: "Need Reliable IT Support or Repairs?",
-    subtitle: "Contact Repair IT MSP today for fast, local, and expert service you can count on.",
+    subtitle: "Contact Pickens PC Repair LLC today for fast, local, and expert service you can count on.",
     btn1Text: "Schedule Now",
     href1: "tel:+15028918961",
     btn2Text: "Find Our Location",
     href2: "/",
-    image: "bg-[url('/images/image-10.webp')]",
+    image: "bg-[url('/images/rn-infotech-57.webp')]",
 }

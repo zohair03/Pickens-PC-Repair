@@ -105,19 +105,19 @@ const Navbar = () => {
         <TopBar menuOpen={menuOpen} toggleMenu={toggleMenu} />
 
         {/* Row 2 (Desktop) / Rows 2 & 3 (Mobile) */}
-        <div className="liquid-glass-strong-light bg-black/20 rounded-b-xl mx-1 relative px-4 md:px-8 2xl:px-30 py-4 lg:py-3">
+        <div className="// liquid-glass-strong-light backdrop-blur-[5px]! bg-black/20 mx-0 relative px-4 md:px-16 2xl:px-30 py-4 lg:py-4">
 
           {/* Desktop Layout */}
           <div className="hidden lg:flex justify-between items-center" onMouseLeave={closeMega}>
             {/* Logo */}
-            <Link href="/" className="text-xl font-serif leading-relaxed text-primary tracking-tighter uppercase leading-none">
-              <Image
+            <Link href="/">
+              {BusinessInfo.isLogo ? (<Image
                 src={BusinessInfo.Logo}
                 alt="Repair IT MSP Logo"
                 width={80}
                 height={80}
                 className="object-cover rounded-lg"
-              />
+              />) : (<p className="text-2xl font-bold leading-none text-center tracking-widest text-white tracking-widest uppercase">Pickens<br />PC Repair</p>)}
             </Link>
 
             {/* Desktop Nav Links */}
@@ -133,13 +133,13 @@ const Navbar = () => {
           <div className="lg:hidden flex justify-between items-center gap-3">
             {/* Mobile Logo (Centered) */}
             <div className="flex justify-center">
-              <Image
+              {BusinessInfo.isLogo ? (<Image
                 src={BusinessInfo.Logo}
                 alt="Repair IT MSP Logo"
-                width={70}
-                height={70}
+                width={80}
+                height={80}
                 className="object-cover rounded-lg"
-              />
+              />) : (<p className="text-xl font-bold leading-none text-center tracking-widest text-white tracking-widest uppercase">Pickens<br />PC Repair</p>)}
             </div>
 
             {/* Mobile Buttons (Side by Side) */}
