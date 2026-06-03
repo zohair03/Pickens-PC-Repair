@@ -413,6 +413,7 @@
   --color-topbar-text: #ffffff;
   --color-topbar-text-hover: #70C9F9;
   --color-topbar-icon: brightness(0) invert(1);
+  --color-topbar-menuicon: #ffffff;
 
   --color-navbar-link: #FFFFFF;
   --color-navbar-link-hover: #70C9F9;
