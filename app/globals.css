@@ -394,10 +394,10 @@
   --color-primary-btn-icon: brightness(0) invert(1);
   --color-primary-btn-icon-hover: brightness(0) invert(1);
 
-  --color-secondary-btn: #70C9F9;
-  --color-secondary-btn-hover: #45B6F7;
-  --color-secondary-btn-text: #002D62;
-  --color-secondary-btn-text-hover: #001F44;
+  --color-secondary-btn: #002D62;
+  --color-secondary-btn-hover: #001F44;
+  --color-secondary-btn-text: #ffffff;
+  --color-secondary-btn-text-hover: #ffffff;
   --color-secondary-btn-br1-color: #BBE5FC;
   --color-secondary-btn-br2-color: #FFFFFF;
 
@@ -409,11 +409,10 @@
 
   --color-label-text: var(--color-primary);
 
-  --color-topbar-bg: ;
-  --color-topbar-text: #111111;
+  --color-topbar-bg: var(--color-footer-form-bg);
+  --color-topbar-text: #ffffff;
   --color-topbar-text-hover: #70C9F9;
-  /* Formulated to generate #002D62 precisely from a black icon asset */
-  --color-topbar-icon: brightness(0) saturate(100%) invert(13%) sepia(35%) saturate(5441%) hue-rotate(204deg) brightness(92%) contrast(103%);
+  --color-topbar-icon: brightness(0) invert(1);
 
   --color-navbar-link: #FFFFFF;
   --color-navbar-link-hover: #70C9F9;
