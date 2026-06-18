@@ -8,7 +8,7 @@ import Label from "../ui/texts/Label";
 import FaqItem from "../ui/FaqItem";
 
 
-const Faqs = ({ image, faqs = [], label = "? FAQs", title = "Frequently Asked Questions" }) => {
+const Faqs = ({bgColor, isImage=true, image, isButton=true, faqs = [], content, label = "? FAQs" }) => {
   const [openId, setOpenId] = useState(null);
   const [isMounted, setIsMounted] = useState(false);
   const { ref, inView } = useInView({
@@ -33,7 +33,7 @@ const Faqs = ({ image, faqs = [], label = "? FAQs", title = "Frequently Asked Qu
             <div className="h-10 w-72 bg-gray-200 rounded animate-pulse" />
           </div>
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 w-full">
-            <div className="w-full lg:w-1/2 flex flex-col gap-4">
+            <div className="w-full flex flex-col gap-4">
               {[...Array(4)].map((_, i) => (
                 <div key={i} className="h-16 bg-gray-200 rounded animate-pulse" />
               ))}
@@ -46,8 +46,8 @@ const Faqs = ({ image, faqs = [], label = "? FAQs", title = "Frequently Asked Qu
   }
 
   return (
-    <section ref={ref} className="bg-[image:var(--color-section-bg-faqs)] relative overflow-hidden max-[380px]:px-5 p-8 lg:py-12 lg:px-16 2xl:px-50">
-      
+    <section ref={ref} className={`${bgColor} relative overflow-hidden max-[380px]:px-5 p-8 lg:py-12 lg:px-16 2xl:px-50`}>
+
       <div className="relative z-10 flex flex-col gap-8 md:gap-12 items-center">
 
         <div
@@ -55,12 +55,12 @@ const Faqs = ({ image, faqs = [], label = "? FAQs", title = "Frequently Asked Qu
             ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}
         >
           <Label label={label} />
-          <H2 text={title} />
+          <H2 text={content?.heading} />
         </div>
 
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 w-full items-start">
 
-          <div className="w-full lg:w-1/2 flex flex-col gap-1">
+          <div className="w-full  flex flex-col gap-1">
             {faqs.map((faq, index) => (
               <FaqItem
                 key={faq.id}
@@ -73,33 +73,35 @@ const Faqs = ({ image, faqs = [], label = "? FAQs", title = "Frequently Asked Qu
             ))}
           </div>
 
-          <div
-            className={`hidden lg:block w-full lg:w-1/2 transition-all duration-700 ease-out delay-500
-              ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
-          >
-            <div className="relative w-full h-[480px] rounded-2xl overflow-hidden"
-              style={{
-                boxShadow: '0 16px 48px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.3)',
-                border: '2px solid rgba(255, 255, 255, 0.4)',
-              }}
-            >
-              <Image
-                src={image}
-                alt="FAQ Image"
-                fill
-                sizes="(max-width: 1024px) 0vw, 50vw"
-                className="object-cover"
-              />
-            </div>
-          </div>
 
+          {isImage && (
+            <div
+              className={`hidden lg:block w-full lg:w-1/2 transition-all duration-700 ease-out delay-500
+                ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+            >
+              <div className="relative w-full h-[480px] rounded-2xl overflow-hidden"
+                style={{
+                  boxShadow: '0 16px 48px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.3)',
+                  border: '2px solid rgba(255, 255, 255, 0.4)',
+                }}
+              >
+                <Image
+                  src={image}
+                  alt="FAQ Image"
+                  fill
+                  sizes="(max-width: 1024px) 0vw, 50vw"
+                  className="object-cover"
+                />
+              </div>
+            </div>
+          )}
         </div>
 
         <div
           className={`flex justify-center w-full sm:w-auto transition-all duration-700 ease-out delay-700
             ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}
         >
-          <PrimaryBtn custom={"py-1"} href="/" btnText="Still Have Questions? Contact Us" />
+          {isButton && <PrimaryBtn custom={"py-1"} href={content.href} btnText={content.btnText} />}
         </div>
 
       </div>

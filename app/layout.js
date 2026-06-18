@@ -4,24 +4,24 @@ import BusinessInfo from "@/cms/business Info/businessInfo";
 import Navbar from "@/components/sections/navbarSection/navbar";
 import Footer from "@/components/sections/footer";
 
+const roboto = Roboto({
+  subsets: ['latin'],
+  weight: ['400', '500', '700'],
+  variable: '--font-roboto',
+  display: 'swap',
+})
+
 const bitcountSingle = Bitcount_Single({
   subsets: ['latin'],
-  weight: 'variable', // Allows any weight from 100-900
+  weight: 'variable',
   variable: '--font-bitcount-single',
   display: 'swap',
 })
 
 const boldonse = Boldonse({
   subsets: ['latin'],
-  weight: '400',          // Matches your .boldonse-regular requirement
-  variable: '--font-boldonse', // Create a CSS variable
-  display: 'swap',
-})
-
-const roboto = Roboto({
-  subsets: ['latin'],
-  weight: 'variable',       // Allows for any weight and variation axes
-  variable: '--font-roboto', // Creates the CSS variable
+  weight: '400',
+  variable: '--font-boldonse',
   display: 'swap',
 })
 

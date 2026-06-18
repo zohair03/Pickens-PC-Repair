@@ -35,7 +35,6 @@ const Hero = () => {
           text={hero.subtitle}
           custom={`${isMounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}
         />
-
         <div
           className={`w-[90%] md:w-fit flex flex-col sm:flex-row gap-5 md:gap-5
                 transition-all duration-700 ease-out

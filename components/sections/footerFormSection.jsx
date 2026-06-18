@@ -67,6 +67,7 @@ const FooterForm = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="break-all text-footer-form-text/80 text-base font-sans md:text-lg font-medium hover:text-footer-form-text-hover transition-colors"
+                  suppressHydrationWarning={true}
                 >
                   {item.text}
                 </a>

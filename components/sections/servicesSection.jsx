@@ -8,10 +8,9 @@ import Label from "../ui/texts/Label";
 import H2 from "../ui/texts/H2";
 import H2Subtitle from "../ui/texts/H2Subtitle";
 import ServiceCards from "../ui/cards/ServiceCards";
-import { ServicesContent } from "../../cms/content/content";
 
 
-const Services = () => {
+const Services = ({content}) => {
   const [isMounted, setIsMounted] = useState(false);
   const { ref, inView } = useInView({
     threshold: 0.1,
@@ -53,14 +52,14 @@ const Services = () => {
       <div className={`relative z-10 flex flex-col items-center gap-4 mb-8 md:mb-10 transition-all duration-700 ease-out
         ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}>
         <div className="flex flex-col gap-2">
-          <Label label={ServicesContent.label} />
-          <H2 text={ServicesContent.heading} />
+          <Label label={content.label} />
+          <H2 text={content.heading} />
         </div>
-        <H2Subtitle text={ServicesContent.subtitle} />
+        <H2Subtitle text={content.subtitle} />
       </div>
 
       <div className="relative z-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-        {ServicesContent.cards.map((service, index) => (
+        {content.cards.map((service, index) => (
           <ServiceCards
             key={index}
             service={service}
@@ -72,7 +71,7 @@ const Services = () => {
 
       <div className={`relative z-10 w-full flex justify-center mt-8 transition-all duration-700 ease-out delay-700
         ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}>
-        <PrimaryBtn href="/" btnText="View All Services" />
+        <PrimaryBtn href={content.href} btnText={content.cta} />
       </div>
     </section>
   );

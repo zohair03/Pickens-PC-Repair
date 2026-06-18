@@ -7,7 +7,7 @@ import TextAndImage from "@/components/sections/textAndImageSection";
 import AboutUs from "@/components/sections/aboutusSection";
 import Marquee from "@/components/ui/marqueeText";
 import Faqs from "@/components/sections/faqSection";
-import { FaqsContent } from "@/cms/content/content";
+import { FaqsContent, ServicesContent } from "@/cms/content/content";
 
 
 export default function Home() {
@@ -15,11 +15,11 @@ export default function Home() {
     <main>
       <Hero />
       <Marquee />
-      <Services />
+      <Services content={ServicesContent}/>
       <AboutUs />
       <WhyChooseUs />
       <Reviews />
-      <Faqs image={FaqsContent.image} faqs={FaqsContent.questions} />
+      <Faqs bgColor='bg-[image:var(--color-section-bg-faqs)]' image={FaqsContent.image} faqs={FaqsContent.questions} content={FaqsContent} />
       <FinalCta />
     </main>
   );

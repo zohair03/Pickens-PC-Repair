@@ -38,17 +38,21 @@ const FooterLinks = () => {
           <div className="flex flex-col gap-1">
             <Link
               href="/"
-              className="logo-glow text-5xl lg:text-3xl xl:text-5xl text-red-500"
+              className="logo-glow text-5xl lg:text-3xl xl:text-5xl text-red-500 flex flex-col items-center"
             >
-              <Link href="/" className="flex flex-col items-center">
-                {BusinessInfo.isLogo ? (<Image
+              {BusinessInfo.isLogo ? (
+                <Image
                   src={BusinessInfo.Logo}
                   alt="Repair IT MSP Logo"
                   width={100}
                   height={100}
                   className="object-cover rounded-lg"
-                />) : (<p className="text-3xl font-bold leading-none text-center tracking-widest text-white tracking-widest uppercase">Pickens<br />PC Repair</p>)}
-              </Link>
+                />
+              ) : (
+                <p className="text-3xl font-bold leading-none text-center tracking-widest text-white uppercase">
+                  Pickens<br />PC Repair
+                </p>
+              )}
             </Link>
           </div>
 

@@ -59,6 +59,7 @@ const CallButton = ({btnText, custom, disabled}) => {
         href={`tel:${PHONE_NUMBER.replace(/-/g, "")}`}
         className={`${sharedClasses} ${colorClasses} w-[214px] px-8 transition-all ease-in-out duration-300 min-w-[90%]  min-h-[50px] sm:hidden flex items-center justify-center gap-2`}
         style={custom} 
+        suppressHydrationWarning={true}
       >
         <Image
           src="/icons/call.svg"
