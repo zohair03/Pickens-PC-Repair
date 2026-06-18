@@ -11,16 +11,7 @@ export const metadata = {
 const ServicesPage = () => {
     return (
         <>
-            <SubpageHero
-                title={ServicesHeroContent.heading}
-                subtitle={ServicesHeroContent.subtitle}
-                breadcrumb={ServicesHeroContent.breadcrumb}
-                bgimage={ServicesHeroContent.bgImage}
-                cta1={ServicesHeroContent.btn1Text}
-                cta2={ServicesHeroContent.btn2Text}
-                href1={ServicesHeroContent.href1}
-                href2={ServicesHeroContent.href2}
-            />
+            <SubpageHero content={ServicesHeroContent}/>
             <Services content={ServicesPageCardsContent}/>
         </>
     );
