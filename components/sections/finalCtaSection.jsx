@@ -8,20 +8,8 @@ import { useInView } from "react-intersection-observer";
 import Label from "../ui/texts/Label";
 import FinalCtaH2 from "../ui/texts/FinalCtaH2";
 import FinalCtaSubtitle from "../ui/texts/FinalCtaSubtitle";
-import { FinalCtaContent } from "@/cms/content/content";
 
-const FinalCta = ({
-  label = FinalCtaContent.label,
-  title = FinalCtaContent.heading,
-  subtitle = FinalCtaContent.subtitle,
-  cta1 = FinalCtaContent.btn1Text,
-  href1 = FinalCtaContent.href1,
-  cta2 = FinalCtaContent.btn2Text,
-  href2 = FinalCtaContent.href2,
-  image = FinalCtaContent.image,
-  height = "min-sm:h-[70vh]",
-  headingFontSize,
-}) => {
+const FinalCta = ({content, height = "min-sm:h-[70vh]"}) => {
 
   const [isMounted, setIsMounted] = useState(false);
   const { ref, inView } = useInView({
@@ -36,7 +24,7 @@ const FinalCta = ({
   if (!isMounted) {
     return (
       <section
-        className={`${image} flex flex-col items-center justify-center relative min-h-[65vh] ${height} md:h-[60vh] lg:min-h-[40vh] xl:min-h-[70vh] bg-cover bg-center max-[380px]:py-15 p-8 py-12 lg:py-12 lg:px-16`}
+        className={`${content.image} flex flex-col items-center justify-center relative min-h-[65vh] ${height} md:h-[60vh] lg:min-h-[40vh] xl:min-h-[70vh] bg-cover bg-center max-[380px]:py-15 p-8 py-12 lg:py-12 lg:px-16`}
       />
     );
   }
@@ -44,7 +32,7 @@ const FinalCta = ({
   return (
     <section
       ref={ref}
-      className={`${image} flex flex-col items-center justify-center relative min-h-[65vh] ${height} md:h-[60vh] lg:min-h-[40vh] xl:min-h-[70vh] bg-cover bg-center max-[380px]:py-15 p-8 py-12 lg:py-12 lg:px-16`}
+      className={`${content.image} flex flex-col items-center justify-center relative min-h-[65vh] ${height} md:h-[60vh] lg:min-h-[40vh] xl:min-h-[70vh] bg-cover bg-center max-[380px]:py-15 p-8 py-12 lg:py-12 lg:px-16`}
     >
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/70" />
@@ -57,9 +45,9 @@ const FinalCta = ({
           className={`flex flex-col lg:gap-4 text-center items-center transition-all duration-700 ease-out
             ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}
         >
-          <Label label={label} custom="text-white mb-1 lg:mb-[-12px]" />
-          <FinalCtaH2 text={title} custom={`${headingFontSize} leading-relaxed`} />
-          <FinalCtaSubtitle text={subtitle} />
+          <Label label={content.label} custom="text-white mb-1 lg:mb-[-12px]" />
+          <FinalCtaH2 text={content.heading} custom={`leading-relaxed`} />
+          <FinalCtaSubtitle text={content.subtitle} />
         </div>
 
         {/* Buttons */}
@@ -67,8 +55,8 @@ const FinalCta = ({
           className={`flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center items-center transition-all duration-700 ease-out delay-300
             ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}
         >
-          <CallButton btnText={cta1} />
-          <TertiaryBtn href={href2} btnText={cta2} />
+          <CallButton btnText={content.btn1Text} href={content.href1} />
+          <TertiaryBtn href={content.href2} btnText={content.btn2Text} />
         </div>
       </div>
     </section>

@@ -30,7 +30,8 @@ const BusinessInfo = {
         Linkedin: "https://www.linkedin.com/in/ppr82/",
         Youtube: "https://www.youtube.com/",
         GMB: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3518.802398347841!2d-86.83284809999999!3d33.4720083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8889235abe10577b%3A0x2f4bef4ab1043af5!2sPickens%20PC%20Repair%20LLC!5e1!3m2!1sen!2sin!4v1780426364966!5m2!1sen!2sin"
-    }
+    },
+    Services:["PC & Mac Repairs", "Virus & Malware Removal", "Data Recovery & Backup", "Computer Network", "System Upgrades", "Onsite & Home Support",]
 }
 
 export default BusinessInfo;

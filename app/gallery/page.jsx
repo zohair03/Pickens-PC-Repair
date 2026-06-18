@@ -48,16 +48,7 @@ const Gallery = () => {
 
     return (
         <>
-            <SubpageHero
-                title={GalleryHeroContent.heading}
-                subtitle={GalleryHeroContent.subtitle}
-                breadcrumb={GalleryHeroContent.breadcrumb}
-                bgimage={GalleryHeroContent.bgImage}
-                cta1={GalleryHeroContent.btn1Text}
-                cta2={GalleryHeroContent.btn2Text}
-                href1={GalleryHeroContent.href1}
-                href2={GalleryHeroContent.href2}
-            />
+            <SubpageHero content={GalleryHeroContent} />
             <section className={`bg-[--color-section-bg] p-8 lg:py-12 lg:px-16`}>
                 {/* Grid */}
                 <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">

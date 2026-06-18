@@ -2,7 +2,7 @@
 import PrimaryBtn from "../ui/buttons/primaryBtn";
 import { useState } from "react";
 
-const ContactPageSignUpSection = () => {
+const ContactPageSignUpSection = ({content}) => {
   const [email, setEmail] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [status, setStatus] = useState(""); // "success" | "error" | ""
@@ -51,13 +51,12 @@ const ContactPageSignUpSection = () => {
       <div className="w-full bg-secondary rounded-2xl px-6 sm:px-10 md:px-16 py-14 sm:py-16 md:py-20 flex flex-col items-center justify-center text-center">
         {/* Heading */}
         <h2 className="font-serif text-xl sm:text-2xl md:text-3xl text-zinc-900 tracking-tight">
-          Sign Up To My Newsletter
+          {content.heading}
         </h2>
 
         {/* Subtitle */}
-        <p className="mt-4 text-sm sm:text-base text-zinc-500 font-sans font-normal max-w-sm sm:max-w-md leading-relaxed">
-          Stay up to date with my latest blog posts, template releases, and
-          exclusive offers.
+        <p className="mt-4 text-sm sm:text-base text-zinc-500 font-sans font-normal max-w-sm sm:max-w-xl leading-relaxed">
+          {content.subHeading}
         </p>
 
         {/* Input + Button */}
@@ -96,7 +95,7 @@ const ContactPageSignUpSection = () => {
                     Sending...
                   </span>
                 ) : (
-                  "Sign up"
+                  content.cta
                 )
               }
               custom="rounded-xl min-h-[54px]"

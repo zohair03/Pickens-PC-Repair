@@ -11,16 +11,7 @@ export const metadata = {
 const FAQs = () => {
     return (
         <>
-            <SubpageHero
-                title={FaqsHeroContent.heading}
-                subtitle={FaqsHeroContent.subtitle}
-                breadcrumb={FaqsHeroContent.breadcrumb}
-                bgimage={FaqsHeroContent.bgImage}
-                cta1={FaqsHeroContent.btn1Text}
-                cta2={FaqsHeroContent.btn2Text}
-                href1={FaqsHeroContent.href1}
-                href2={FaqsHeroContent.href2}
-            />
+            <SubpageHero content={FaqsHeroContent} />
             <Faqs bgColor='bg-[image:var(--color-section-bg)]' isImage={false} faqs={FaqsPageContent.questions} content={FaqsPageContent} />
         </>
     );

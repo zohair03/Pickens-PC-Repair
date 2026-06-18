@@ -251,7 +251,7 @@ const ContactInfo = () => {
             </h2>
             <div className="flex flex-wrap gap-3.5">
               {/* GitHub */}
-              <Link
+              {/* <Link
                 href={BusinessInfo.SocialMedia.Linkedin || "https://github.com"}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -259,7 +259,7 @@ const ContactInfo = () => {
               >
                 <GithubIcon />
                 Github
-              </Link>
+              </Link> */}
               {/* Instagram */}
               {BusinessInfo.SocialMedia.Instagram && (
                 <Link

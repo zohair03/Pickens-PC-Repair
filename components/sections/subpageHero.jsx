@@ -6,19 +6,9 @@ import SecondaryBtn from "../ui/buttons/secondaryBtn";
 import TertiaryBtn from "../ui/buttons/TertiaryBtn";
 import HeroHeading from "../ui/texts/HeroHeading";
 import HeroSubtitle from "../ui/texts/HeroSubtitle";
-import { Abouthero } from "../../cms/content/content";
 
-const SubpageHero = ({
-  title,
-  subtitle,
-  breadcrumb,
-  isServicesPage,
-  bgimage,
-  cta1,
-  cta2,
-  href2,
-  showCta2 = true,
-}) => {
+
+const SubpageHero = ({ content, isServicesPage, showCta2 = true}) => {
 
   const [isMounted, setIsMounted] = useState(false);
 
@@ -32,7 +22,7 @@ const SubpageHero = ({
     <>
       {/* Hero Banner */}
       <section
-        className={`bg-cover bg-center ${bgimage} flex flex-col items-center justify-center relative pt-[20%] md:pt-[10%] xl:pt-[5%] 2xl:pt-[10%] pb-12 min-h-[55vh] sm:min-h-[50vh] md:min-h-[60vh] lg:min-h-[50vh] xl:min-h-[70vh] 2xl:min-h-[60vh]`}
+        className={`bg-cover bg-center ${content.bgImage} flex flex-col items-center justify-center relative pt-[20%] md:pt-[10%] xl:pt-[5%] 2xl:pt-[10%] pb-12 min-h-[55vh] sm:min-h-[50vh] md:min-h-[60vh] lg:min-h-[50vh] xl:min-h-[70vh] 2xl:min-h-[60vh]`}
       >
         {/* Overlay */}
         <div className="absolute inset-0 bg-black/70" />
@@ -40,17 +30,17 @@ const SubpageHero = ({
         {/* Content */}
         <div className="w-full relative z-10 h-full flex flex-col items-center justify-center gap-3 md:gap-5 px-6 sm:px-12 md:px-24 text-center">
           <HeroHeading
-            text={title}
+            text={content.heading}
             custom={`${isMounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}
           />
           <HeroSubtitle
-            text={subtitle}
+            text={content.subtitle}
             custom={`${isMounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}
           />
           {/* Buttons */}
           <div className="w-[90%] md:w-fit flex flex-col sm:flex-row gap-5 md:gap-5">
-            <SecondaryBtn href={href2} btnText={cta2} custom="border border-light-blue" />
-            <TertiaryBtn href={href2} btnText={cta1} />
+            <SecondaryBtn href={content.href1} btnText={content.btn1Text} custom="border border-light-blue" />
+            <TertiaryBtn href={content.href2} btnText={content.btn2Text} />
           </div>
         </div>
       </section>
@@ -87,7 +77,7 @@ const SubpageHero = ({
         ) : null}
 
         <span className="text-lg font-semibold text-primary font-medium">
-          {breadcrumb}
+          {content.breadcrumb}
         </span>
       </div>
     </>

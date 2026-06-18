@@ -8,7 +8,7 @@ import Label from "../ui/texts/Label";
 import FaqItem from "../ui/FaqItem";
 
 
-const Faqs = ({bgColor, isImage=true, image, isButton=true, faqs = [], content, label = "? FAQs" }) => {
+const Faqs = ({bgColor='bg-white', isImage=true, isButton=true, content }) => {
   const [openId, setOpenId] = useState(null);
   const [isMounted, setIsMounted] = useState(false);
   const { ref, inView } = useInView({
@@ -54,14 +54,14 @@ const Faqs = ({bgColor, isImage=true, image, isButton=true, faqs = [], content, 
           className={`flex flex-col gap-2 text-center items-center transition-all duration-700 ease-out
             ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}
         >
-          <Label label={label} />
+          <Label label={content.label} />
           <H2 text={content?.heading} />
         </div>
 
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 w-full items-start">
 
           <div className="w-full  flex flex-col gap-1">
-            {faqs.map((faq, index) => (
+            {content.questions.map((faq, index) => (
               <FaqItem
                 key={faq.id}
                 faq={faq}
@@ -86,7 +86,7 @@ const Faqs = ({bgColor, isImage=true, image, isButton=true, faqs = [], content, 
                 }}
               >
                 <Image
-                  src={image}
+                  src={content.image}
                   alt="FAQ Image"
                   fill
                   sizes="(max-width: 1024px) 0vw, 50vw"
