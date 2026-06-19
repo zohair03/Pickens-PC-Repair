@@ -9,7 +9,7 @@ const TopBar = ({ menuOpen, toggleMenu }) => {
       <div className="flex items-center gap-1.5">
         <div className="flex items-center gap-2">
           <span className="font-bold text-base text-topbar-text tracking-tight">
-            5.0
+            4.8
           </span>
           <div className="flex items-center gap-0.5">
             {[...Array(5)].map((_, i) => (
@@ -24,10 +24,10 @@ const TopBar = ({ menuOpen, toggleMenu }) => {
             ))}
           </div>
           <Link
-            href="#"
+            href="https://www.google.com/maps/place/Pickens+PC+Repair+LLC/@33.4723842,-86.8352621,808m/data=!3m2!1e3!5s0x88891eba116cdd3b:0xc370ad7c906701c0!4m8!3m7!1s0x8889235abe10577b:0x2f4bef4ab1043af5!8m2!3d33.4720083!4d-86.8328481!9m1!1b1!16s%2Fg%2F11fm5qc5xb?hl=en&entry=ttu&g_ep=EgoyMDI2MDYxNi4wIKXMDSoASAFQAw%3D%3D"
             className="text-[0.85rem] text-topbar-text underline decoration-black/30 underline-offset-2 hover:text-topbar-text-hover transition-colors"
           >
-            (42 Reviews)
+            (68 Reviews)
           </Link>
         </div>
       </div>
@@ -59,9 +59,9 @@ const TopBar = ({ menuOpen, toggleMenu }) => {
               height={18}
               className="[filter:var(--color-topbar-icon)]"
             />
-            <p className="text-[0.85rem] text-topbar-text font-medium">
+            <Link href={`tel:${BusinessInfo.PrimaryContactNumber}`} className="text-[0.85rem] text-topbar-text font-medium">
               Call or Text: <span className="font-bold">{BusinessInfo.PrimaryContactNumber}</span>
-            </p>
+            </Link>
           </div>
         </div>
 

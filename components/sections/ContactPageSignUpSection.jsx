@@ -48,7 +48,7 @@ const ContactPageSignUpSection = ({content}) => {
 
   return (
     <section className="w-full px-4 sm:px-2 md:px-4 py-4">
-      <div className="w-full bg-secondary rounded-2xl px-6 sm:px-10 md:px-16 py-14 sm:py-16 md:py-20 flex flex-col items-center justify-center text-center">
+      <div className="w-full bg-gradient-to-b from-white to-gray-200  border border-dashed border-gray-400 rounded-2xl px-6 sm:px-10 md:px-16 py-14 sm:py-16 md:py-20 flex flex-col items-center justify-center text-center">
         {/* Heading */}
         <h2 className="font-serif text-xl sm:text-2xl md:text-3xl text-zinc-900 tracking-tight">
           {content.heading}

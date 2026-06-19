@@ -3,12 +3,13 @@ import Link from "next/link";
 import React, { useState, useEffect, useRef, useCallback } from "react";
 import Image from "next/image";
 import SecondaryBtn from "../ui/buttons/secondaryBtn";
+import CallButton from "../ui/buttons/callButton";
 import TertiaryBtn from "../ui/buttons/TertiaryBtn";
 import HeroHeading from "../ui/texts/HeroHeading";
 import HeroSubtitle from "../ui/texts/HeroSubtitle";
 
 
-const SubpageHero = ({ content, isServicesPage, showCta2 = true}) => {
+const SubpageHero = ({ content, isServicesPage, isCta2=true, isClickToCall=false }) => {
 
   const [isMounted, setIsMounted] = useState(false);
 
@@ -39,8 +40,18 @@ const SubpageHero = ({ content, isServicesPage, showCta2 = true}) => {
           />
           {/* Buttons */}
           <div className="w-[90%] md:w-fit flex flex-col sm:flex-row gap-5 md:gap-5">
-            <SecondaryBtn href={content.href1} btnText={content.btn1Text} custom="border border-light-blue" />
-            <TertiaryBtn href={content.href2} btnText={content.btn2Text} />
+            {
+              isClickToCall ? (
+                <CallButton btnText={content.btn1Text} />
+              ) : (
+                <SecondaryBtn href={content.href1} btnText={content.btn1Text} custom="border border-light-blue" />
+              )
+            }
+            {
+              isCta2 && (
+                <TertiaryBtn href={content.href2} btnText={content.btn2Text} />
+              )
+            }
           </div>
         </div>
       </section>

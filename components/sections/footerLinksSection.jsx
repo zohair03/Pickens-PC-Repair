@@ -3,29 +3,88 @@ import Image from "next/image";
 import CallButton from "../ui/buttons/callButton";
 import BusinessInfo from "@/cms/business Info/businessInfo";
 
+// Instagram Icon
+const InstagramIcon = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="30"
+    height="30"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="#ffffff"
+    strokeWidth="2.2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className="w-7 h-7 shrink-0 text-zinc-600"
+  >
+    <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+  </svg>
+);
+
+// Facebook Icon
+const FacebookIcon = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="30"
+    height="30"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="#ffffff"
+    strokeWidth="2.2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className="w-7 h-7 shrink-0 text-zinc-600"
+  >
+    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+  </svg>
+);
+
+// LinkedIn Icon
+const LinkedinIcon = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="30"
+    height="30"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="#ffffff"
+    strokeWidth="2.2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className="w-7 h-7 shrink-0 text-zinc-600"
+  >
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+    <rect width="4" height="12" x="2" y="9" />
+    <circle cx="4" cy="4" r="2" />
+  </svg>
+);
+
 const quickLinks1 = [
   { title: "Home", href: "/" },
-  { title: "About Us", href: "/" },
-  { title: "FAQs", href: "/" },
+  { title: "About Us", href: "/about" },
+  { title: "FAQs", href: "/faqs" },
 ];
 
 const quickLinks2 = [
-  { title: "Contact Us", href: "/" },
-  { title: "Services", href: "/" },
-  { title: "Gallery", href: "/" },
+  { title: "Contact Us", href: "/contact" },
+  { title: "Services", href: "/services" },
+  { title: "Gallery", href: "/gallery" },
 ];
 
 const servicesLinks1 = [
-  { title: "PC & Mac Repairs", href: "/" },
-  { title: "Data Backup & Recovery", href: "/" },
-  { title: "Computer Networking", href: "/" },
+  { title: "PC & Mac Repairs", href: "/services/pc-and-mac-repairs" },
+  { title: "On-Site & In-Home Support", href: "/services/onsite-and-home-support" },
+  { title: "Virus & Malware Removal", href: "/services/virus-and-malware-removal" },
+  { title: "Data Backup & Recovery", href: "/services/data-backup-and-recovery" },
+  { title: "Computer Networking", href: "/services/computer-networking" },
+  { title: "System Tune-Ups & Upgrades", href: "/services/system-tune-ups-and-upgrades" },
 ];
-
-const servicesLinks2 = [];
 
 const FooterLinks = () => {
   return (
-    <footer className="relative overflow-hidden bg-gradient-to-t from-footer-bg via-footer-bg to-footer-bg text-white font-sans">
+    <footer className="relative overflow-hidden bg-gradient-to-t from-footer-bg via-footer-bg to-[#071a40] text-white font-sans">
       {/* Floating orbs */}
       <div className="floating-orb floating-orb-1 top-[20%] left-[5%] opacity-50" />
       <div className="floating-orb floating-orb-3 bottom-[15%] right-[8%] opacity-40" />
@@ -62,60 +121,16 @@ const FooterLinks = () => {
           </div>
 
           {/* Social Icons */}
-          <div className="flex gap-4">
-            <Link
-              href="https://x.com"
-              target="_blank"
-              className="transition-transform duration-600 hover:-translate-y-1 text-white hover:text-primary transition-colors flex flex-col items-center justify-center"
-            >
-              <Image
-                src="/icons/Twitter.svg"
-                alt="twitter"
-                width={70}
-                height={70}
-                style={{ width: "auto", height: "auto" }}
-                className="icon-color"
-              />
-            </Link>
-            <Link
-              href="https://facebook.com"
-              target="_blank"
-              className="transition-transform duration-600 hover:-translate-y-1 text-white hover:text-primary transition-colors"
-            >
-              <Image
-                src="/icons/Facebook.svg"
-                alt="Facebook"
-                width={28}
-                height={28}
-                className=""
-              />
-            </Link>
-            <Link
-              href="https://instagram.com"
-              target="_blank"
-              className="transition-transform duration-600 hover:-translate-y-1 text-white hover:text-primary transition-colors"
-            >
-              <Image
-                src="/icons/Instagram.svg"
-                alt="Instagram"
-                width={30}
-                height={30}
-                className=""
-              />
-            </Link>
-            <Link
-              href="https://youtube.com"
-              target="_blank"
-              className="transition-transform duration-600 hover:-translate-y-1 text-white hover:text-primary transition-colors"
-            >
-              <Image
-                src="/icons/Youtube.svg"
-                alt="YouTube"
-                width={30}
-                height={30}
-                className=""
-              />
-            </Link>
+          <div className="mt-2 flex gap-4">
+            <a className="hover:scale-110 active:scale-95 transition-all duration-200" href={BusinessInfo.SocialMedia.Facebook} target="_blank" rel="noopener noreferrer">
+              <FacebookIcon />
+            </a>
+            <a className="hover:scale-110 active:scale-95 transition-all duration-200" href={BusinessInfo.SocialMedia.Instagram} target="_blank" rel="noopener noreferrer">
+              <InstagramIcon />
+            </a>
+            <a className="hover:scale-110 active:scale-95 transition-all duration-200" href={BusinessInfo.SocialMedia.Linkedin} target="_blank" rel="noopener noreferrer">
+              <LinkedinIcon />
+            </a>
           </div>
         </div>
 
@@ -181,14 +196,14 @@ const FooterLinks = () => {
               Contact Us
             </h4>
             <div className="flex flex-col gap-4">
-              <p className="text-footer-form-text/80 hover:text-footer-form-text-hover text-sm md:text-base transition-colors">
+              <a href={`tel:${BusinessInfo.PrimaryContactNumber}`} className="text-footer-form-text/80 hover:text-footer-form-text-hover text-sm md:text-base transition-colors">
                 {BusinessInfo.PrimaryContactNumber}
-              </p>
-              <p className="text-footer-form-text/80 hover:text-footer-form-text-hover text-sm md:text-base transition-colors">
+              </a>
+              <a href={`mailto:${BusinessInfo.Email}`} className="text-footer-form-text/80 hover:text-footer-form-text-hover text-sm md:text-base transition-colors">
                 {BusinessInfo.Email}
-              </p>
+              </a>
               <a
-                href=""
+                href={BusinessInfo.GoogleMaps}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-footer-form-text/80 hover:text-footer-form-text-hover text-sm md:text-base leading-relaxed transition-colors"

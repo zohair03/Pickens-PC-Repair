@@ -7,7 +7,7 @@ const BusinessInfo = {
     Email: "info@pickenspcrepair.com",
     ShortAddress: "Homewood, AL",
     Address: "244 Goodwin Crest Dr Ste 111, Homewood, AL, United States, 35209",
-    GoogleMaps: "https://maps.google.com/?q=244+Goodwin+Crest+Dr+Ste+111,+Homewood,+AL+35209",
+    GoogleMaps: "https://www.google.com/maps/place/Pickens+PC+Repair+LLC/@33.4723842,-86.8352621,808m/data=!3m1!1e3!4m6!3m5!1s0x8889235abe10577b:0x2f4bef4ab1043af5!8m2!3d33.4720083!4d-86.8328481!16s%2Fg%2F11fm5qc5xb?hl=en&entry=ttu&g_ep=EgoyMDI2MDYxNi4wIKXMDSoASAFQAw%3D%3D",
     Address2: "244 Goodwin Crest Dr Ste 111, Homewood, AL, United States, 35209",
     BusinessHours: [
         {

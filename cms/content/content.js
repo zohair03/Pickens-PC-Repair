@@ -2,15 +2,15 @@ export const hero = {
     heading: "Premier Computer Repair & IT Support Services",
     subtitle: "Pickens PC Repair LLC stands out as your local trusted partner for expert hardware repairs, software troubleshooting, data recovery, and comprehensive IT services.",
     btn1Text: "View Services",
-    href1: "/",
+    href1: "/services",
     btn2Text: "Schedule Now",
-    href2: "/",
+    href2: "/contact",
     bgImage: "bg-[url('/images/image3.webp')]",
 }
 
 export const MarqueeText = [
     "Fast, reliable, and local IT services!",
-    "Call us at +150-289-18961 for support",
+    "Call us at +1 205-774-8415 for support",
     "Expert diagnostics and transparent pricing!",
     "Visit us at 244 Goodwin Crest Dr, Homewood, AL",
     "Your trusted community computer repair experts!",
@@ -28,7 +28,7 @@ export const ServicesContent = {
                 "Comprehensive diagnostic and repair services for laptops, desktops, and all-in-one systems. We handle screen replacements, battery issues, and hardware fixes.",
             image: "/images/rn-infotech-57.webp",
             btnText: "Computer Repairs",
-            href: "/",
+            href: "/services/pc-and-mac-repairs",
         },
         {
             id: "02",
@@ -37,7 +37,7 @@ export const ServicesContent = {
                 "Our technicians will come directly to your home or office for troubleshooting, computer setup, networking, or device installations at affordable rates.",
             image: "/images/rn-infotech-30.webp",
             btnText: "On-Site Support",
-            href: "/",
+            href: "/services/onsite-and-home-support",
         },
         {
             id: "03",
@@ -46,7 +46,7 @@ export const ServicesContent = {
                 "Thorough spyware, ransomware, and virus scanning and removal. We help clean infected operating systems and install preventative protection tools.",
             image: "/images/image10.webp",
             btnText: "Virus Removal",
-            href: "/",
+            href: "/services/virus-and-malware-removal",
         },
         {
             id: "04",
@@ -55,7 +55,7 @@ export const ServicesContent = {
                 "Safe retrieval of your documents, photos, and crucial business data from failed hard drives. We also configure secure local and cloud backup systems.",
             image: "/images/image7.webp",
             btnText: "Data Services",
-            href: "/",
+            href: "/services/data-backup-and-recovery",
         },
         {
             id: "05",
@@ -64,7 +64,7 @@ export const ServicesContent = {
                 "Reliable setup and troubleshooting of home office or business Wi-Fi, routers, modems, switches, and secure remote VPN connections.",
             image: "/images/image6.webp",
             btnText: "Networking Support",
-            href: "/",
+            href: "/services/computer-networking",
         },
         {
             id: "06",
@@ -73,7 +73,7 @@ export const ServicesContent = {
                 "Speed up slow machines with SSD installations, RAM additions, OS reinstalls, and regular dust and thermal compound maintenance.",
             image: "/images/rn-infotech-38.webp",
             btnText: "Tune-Ups & Upgrades",
-            href: "/",
+            href: "/services/system-tune-ups-and-upgrades",
         },
     ],
     cta: "View All Services",
@@ -85,7 +85,7 @@ export const AboutUsContent = {
     heading: "About Pickens PC Repair LLC",
     description: "Pickens PC Repair LLC is a computer support company that specializes in PC repair & Mac repair services. We also specialize in computer networking, data back-up and recovery, virus removal, and other installation services. Many computer repair service companies in nearby towns offer technology services, but as a local computer consulting company, Pickens PC Repair LLC will tailor a solution for your in-home computer repair needs or computer networking support in your office. As a local business, we understand that you want a reliable technology support company that provides quality work at affordable prices. To keep computer repair costs down, we recommend PC maintenance and tune ups to help with virus and spyware prevention. If you suspect you may already have a problem, we can start with a cost-effective computer solution. As a computer owner, you already know that sometimes operating systems just need to be replaced. If that's the case, we'll help you find the best machine.",
     btnText: "Contact Us",
-    href: "/",
+    href: "/contact",
     image1: "/images/rn-infotech-31.webp",
     image2: "/images/rn-infotech-02.webp",
 }
@@ -94,28 +94,28 @@ export const WhyChooseUsContent = {
     label: "Why Us",
     heading: "Why Tech Professionals Choose Pickens PC Repair",
     btnText: "Schedule a Repair",
-    href: "/",
+    href: "/contact",
     cards: [
         {
             id: 1,
             icon: "/icons/workspace_premiu.svg",
             text: "Technical Expertise: Dedicated team of knowledgeable professionals recognized for quick response times and effective diagnostics.",
             linkText: "About Us",
-            href: "/",
+            href: "/about",
         },
         {
             id: 2,
             icon: "/icons/shield_with_heart.svg",
             text: "Transparency & Fair Pricing: Technicians take time to explain issues in simple terms, maintaining honest and fair pricing throughout.",
             linkText: "Testimonials",
-            href: "/",
+            href: "https://www.google.com/maps/place/Pickens+PC+Repair+LLC/@33.4723842,-86.8352621,808m/data=!3m2!1e3!5s0x88891eba116cdd3b:0xc370ad7c906701c0!4m8!3m7!1s0x8889235abe10577b:0x2f4bef4ab1043af5!8m2!3d33.4720083!4d-86.8328481!9m1!1b1!16s%2Fg%2F11fm5qc5xb?hl=en&entry=ttu&g_ep=EgoyMDI2MDYxNi4wIKXMDSoASAFQAw%3D%3D",
         },
         {
             id: 3,
             icon: "/icons/sentiment_very_satisfied.svg",
             text: "Customer-Centric Approach: We go above and beyond, providing customer education and handling urgent hardware and software needs.",
             linkText: "Contact Now",
-            href: "/",
+            href: "/contact",
         },
     ],
 }
@@ -125,7 +125,7 @@ export const TestimonialsContent = {
     heading: "What Our Customers Say",
     subtitle: "Trusted by local clients in Homewood, Alabama and surrounding areas",
     btnText: "View Services",
-    href: "/",
+    href: "/services",
     cards: [
         {
             id: 1,
@@ -204,16 +204,11 @@ export const FinalCtaContent = {
     heading: "Need Reliable IT Support or Repairs?",
     subtitle: "Contact Pickens PC Repair LLC today for fast, local, and expert service you can count on.",
     btn1Text: "Schedule Now",
-    href1: "tel:+15028918961",
+    href1: "",
     btn2Text: "Find Our Location",
-    href2: "/",
+    href2: "/contact",
     image: "bg-[url('/images/rn-infotech-57.webp')]",
 }
-
-
-
-
-// Start generating new content from here....
 
 // About Page Content:
 export const Abouthero = {
@@ -259,7 +254,7 @@ export const ContactHeroContent = {
 
 export const ContactNewsLetterContent = {
     label: "Newsletter",
-    heading: "Stay Tech Smart",
+    heading: "Sign Up To My Newsletter",
     subHeading: "Subscribe to the Pickens PC Repair newsletter for security alerts, quick PC maintenance tips, technology updates, and exclusive service discounts delivered straight to your inbox.",
     cta: "Subscribe",
     href: "/contact",

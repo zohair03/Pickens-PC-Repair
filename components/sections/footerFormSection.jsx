@@ -23,7 +23,7 @@ const contactInfo = [
     icon: "/icons/location.svg",
     alt: "location icon",
     text: BusinessInfo.Address,
-    link: "",
+    link: BusinessInfo.GoogleMaps,
     border: true,
   },
 ];

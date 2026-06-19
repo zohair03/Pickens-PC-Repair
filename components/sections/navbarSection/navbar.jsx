@@ -126,7 +126,7 @@ const Navbar = () => {
             </div>
 
             {/* CTA Button */}
-            <PrimaryBtn btnText="Contact Us" custom="" />
+            <PrimaryBtn btnText="Contact Us" href="/contact" />
           </div>
 
           {/* Mobile Layout */}

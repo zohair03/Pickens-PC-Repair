@@ -1,9 +1,6 @@
-import TextAndImageSection from "@/components/sections/textAndImageSection";
 import SubpageHero from "@/components/sections/subpageHero";
 import ContactInfo from "@/components/ui/ContactInfo";
-import ContactForm from "@/components/ui/contactForm";
-import { ContactHeroContent, ContactNewsLetterContent, ContactFaqContent } from "@/cms/content/content";
-import ContactPageSignUpSection from "@/components/sections/ContactPageSignUpSection";
+import { ContactHeroContent, ContactFaqContent } from "@/cms/content/content";
 import Faqs from "@/components/sections/faqSection";
 
 export const metadata = {
@@ -14,11 +11,8 @@ export const metadata = {
 const Contact = () => {
     return (
         <>
-            <SubpageHero content={ContactHeroContent} />
-            <section className="w-full flex">
-                <ContactInfo />
-            </section>
-            <ContactPageSignUpSection content={ContactNewsLetterContent} />
+            <SubpageHero content={ContactHeroContent} isCta2={false} isClickToCall={true}/>
+            <ContactInfo />
             <Faqs isButton={false} isImage={false} content={ContactFaqContent} />
         </>
     );
