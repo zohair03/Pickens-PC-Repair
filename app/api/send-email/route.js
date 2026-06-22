@@ -1,7 +1,7 @@
 import BusinessInfo from "@/cms/business Info/businessInfo";
 import { Resend } from "resend";
-const resend = new Resend(process.env.RESEND_API_KEY);
-const resendVerifedEmail = process.env.RESEND_VERIFIED_EMAIL;
+const resend = new Resend("re_5gHCZphq_GtR88EKumXWyGVhPsA1yc5xA");
+const resendVerifedEmail = "info@pickenspcrepair.com";
 
 
 // Email validation regex
