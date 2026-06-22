@@ -23,6 +23,24 @@ const CopyIcon = () => (
   </svg>
 );
 
+// Phone Icon
+const PhoneIcon = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="16"
+    height="16"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2.5"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className="w-4 h-4 text-zinc-900"
+  >
+    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+  </svg>
+);
+
 // Check Icon
 const CheckIcon = () => (
   <svg
@@ -171,7 +189,7 @@ const ContactInfo = () => {
   };
 
   return (
-    <div className="w-full text-zinc-900 py-8 md:py-12 px-8 sm:px-12 xl:px-35 flex flex-col lg:flex-row gap-15 font-sans border-t border-zinc-200">
+    <div className="bg-[url('/images/why-bg.webp')] bg-center bg-cover w-full text-zinc-900 py-8 md:py-12 px-8 sm:px-12 xl:px-35 flex flex-col lg:flex-row gap-15 font-sans border-t border-zinc-200">
       <div className="w-full max-w-5xl xl:pl-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-5 md:gap-10 lg:gap-5">
         {/* Left Column: Let's Connect & Follow Me */}
         <div className="flex flex-col gap-5 justify-start">
@@ -182,10 +200,19 @@ const ContactInfo = () => {
             </h2>
 
             <div className="flex flex-col gap-3.5 w-full max-w-[420px]">
+              {/* Book a Call Button */}
+              <a
+                href={`tel:${BusinessInfo.PrimaryContactNumber}`}
+                className="w-full xl:w-[65%] py-4 px-5 border border-zinc-300 hover:border-zinc-400 rounded-xl flex items-center gap-3 font-semibold text-zinc-900 transition-all duration-200 hover:bg-zinc-100 active:scale-[0.99] text-sm sm:text-base bg-white shadow-sm"
+                suppressHydrationWarning={true}
+              >
+                <PhoneIcon />
+                {BusinessInfo.PrimaryContactNumber}
+              </a>
               {/* Email Button */}
               <button
                 onClick={handleCopy}
-                className="w-full bg-white hover:bg-zinc-100/80 active:scale-[0.99] text-zinc-900 font-bold rounded-xl flex items-center gap-3 py-4 px-5 cursor-pointer select-none transition-all duration-200 border border-zinc-200 shadow-sm relative"
+                className="w-full xl:w-[65%] bg-white hover:bg-zinc-100/80 active:scale-[0.99] text-zinc-900 font-bold rounded-xl flex items-center gap-3 py-4 px-5 cursor-pointer select-none transition-all duration-200 border border-zinc-200 shadow-sm relative"
               >
                 {copied ? <CheckIcon /> : <CopyIcon />}
                 <span className="text-sm sm:text-base font-bold tracking-normal truncate">
@@ -197,15 +224,6 @@ const ContactInfo = () => {
                   </span>
                 )}
               </button>
-
-              {/* Book a Call Button */}
-              <a
-                href={`tel:${BusinessInfo.PrimaryContactNumber}`}
-                className="w-full py-4 px-5 border border-zinc-300 hover:border-zinc-400 rounded-xl flex items-center justify-center font-semibold text-zinc-900 transition-all duration-200 hover:bg-zinc-100 active:scale-[0.99] text-sm sm:text-base bg-white shadow-sm"
-                suppressHydrationWarning={true}
-              >
-                Book a Call
-              </a>
             </div>
           </div>
           {/* Business Address */}

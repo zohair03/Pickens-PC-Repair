@@ -17,9 +17,9 @@ const OnSiteHomeSupport = () => {
         <>
             <SubpageHero content={OnSiteHomeSupportHeroContent}/>
             <TextAndImageSection content={OnSiteHomeSupportSection1}/>
-            <TextAndImageSection content={OnSiteHomeSupportSection2} imageLeft={true}/>
+            <TextAndImageSection bgColor="bg-section-bg" content={OnSiteHomeSupportSection2} imageLeft={true}/>
             <TextAndImageSection content={OnSiteHomeSupportSection3}/>
-            <Faqs bgColor='bg-white' content={OnSiteHomeSupportFaqsContent} />
+            <Faqs bgColor="bg-section-bg" content={OnSiteHomeSupportFaqsContent} />
             <FinalCta content={OnSiteHomeSupportFinalCtaContent}/>
         </>
     );

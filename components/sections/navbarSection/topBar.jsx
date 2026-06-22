@@ -35,9 +35,9 @@ const TopBar = ({ menuOpen, toggleMenu }) => {
       {/* Right group: Location + Phone (Desktop) or Hamburger (Mobile) */}
       <div className="flex items-center">
         {/* Desktop Info */}
-        <div className="hidden lg:flex items-center">
+        <div className="hidden lg:flex items-center flex-row-reverse">
           {/* Location */}
-          <div className="flex items-center gap-2 px-6 border-l border-black/10">
+          <Link href={BusinessInfo.GoogleMaps} target="_blank" className="hover:[filter:var(--color-topbar-icon-hover)] text-topbar-text hover:text-topbar-text-hover flex items-center gap-2 px-4 border-l border-black/10">
             <Image
               src="/icons/location-fill.svg"
               alt="Location"
@@ -45,13 +45,13 @@ const TopBar = ({ menuOpen, toggleMenu }) => {
               height={18}
               className="[filter:var(--color-topbar-icon)]"
             />
-            <Link href={BusinessInfo.GoogleMaps} target="_blank" className="text-[0.85rem] text-topbar-text font-medium">
-              Proudly Serving: <span className="font-bold">{BusinessInfo.ShortAddress}</span>
-            </Link>
-          </div>
+            <span className="text-md ">
+              <span className="font-medium">{BusinessInfo.ShortAddress}</span>
+            </span>
+          </Link>
 
           {/* Phone */}
-          <div className="flex items-center gap-2 px-6 border-l border-black/10">
+          <Link href={`tel:${BusinessInfo.PrimaryContactNumber}`} className="hover:[filter:var(--color-topbar-icon-hover)] text-topbar-text hover:text-topbar-text-hover flex items-center gap-2 px-4 border-l border-black/10">
             <Image
               src="/icons/call.svg"
               alt="Phone"
@@ -59,10 +59,10 @@ const TopBar = ({ menuOpen, toggleMenu }) => {
               height={18}
               className="[filter:var(--color-topbar-icon)]"
             />
-            <Link href={`tel:${BusinessInfo.PrimaryContactNumber}`} className="text-[0.85rem] text-topbar-text font-medium">
-              Call or Text: <span className="font-bold">{BusinessInfo.PrimaryContactNumber}</span>
-            </Link>
-          </div>
+            <span  className="text-md">
+              <span className="font-medium">{BusinessInfo.PrimaryContactNumber}</span>
+            </span>
+          </Link>
         </div>
 
         {/* Mobile Hamburger Button */}

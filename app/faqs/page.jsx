@@ -12,7 +12,7 @@ const FAQs = () => {
     return (
         <>
             <SubpageHero content={FaqsHeroContent} />
-            <Faqs bgColor='bg-[image:var(--color-section-bg)]' isImage={false} faqs={FaqsPageContent.questions} content={FaqsPageContent} />
+            <Faqs isImage={false} faqs={FaqsPageContent.questions} content={FaqsPageContent} />
         </>
     );
 };

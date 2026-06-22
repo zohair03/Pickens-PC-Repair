@@ -132,15 +132,15 @@ const Navbar = () => {
           {/* Mobile Layout */}
           <div className="lg:hidden flex justify-between items-center gap-3">
             {/* Mobile Logo (Centered) */}
-            <div className="flex justify-center">
+            <Link href="/" className="flex justify-center">
               {BusinessInfo.isLogo ? (<Image
                 src={BusinessInfo.Logo}
-                alt="Repair IT MSP Logo"
+                alt={`${BusinessInfo.Name} Logo`}
                 width={80}
                 height={80}
                 className="object-cover rounded-lg"
               />) : (<p className="text-xl font-bold leading-none text-center tracking-widest text-white tracking-widest uppercase">Pickens<br />PC Repair</p>)}
-            </div>
+            </Link>
 
             {/* Mobile Buttons (Side by Side) */}
             <div className="flex flex-col items-center justify-center gap-3">

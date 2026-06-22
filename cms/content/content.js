@@ -427,6 +427,7 @@ export const GalleryHeroContent = {
     breadcrumb: "Gallery"
 }
 
+
 export const GalleryPageImage = {
     galleryImages: [
         { id: 1, src: "/images/rn-infotech-57.webp", alt: "Computer Hardware Diagnostic" },
@@ -446,4 +447,28 @@ export const GalleryPageImage = {
         { id: 15, src: "/images/rn-infotech-53.webp", alt: "Solid State Drive (SSD) Upgrade" },
         { id: 16, src: "/images/rn-infotech-54.webp", alt: "Ram Upgrade Installation" },
     ],
+}
+
+// Service Area Page Content:
+export const ServiceAreaheroContent = {
+    heading: "Service Areas We proudly serve in",
+    subtitle: "From Homewood to Hoover and across Birmingham, we bring fast, reliable computer repair services right to your doorstep — home or office.",
+    btn1Text: "Call Us",
+    href1: "/contact",
+    btn2Text: "Contact Us",
+    href2: "/contact",
+    bgImage: "bg-[url('/images/image3.webp')]",
+    breadcrumb: "Service Area"
+}
+
+// Privacy Policy Page Content:
+export const PrivacyPolicyheroContent = {
+    heading: "Privacy Policy",
+    subtitle: "",
+    btn1Text: "Call Us",
+    href1: "/contact",
+    btn2Text: "Contact Us",
+    href2: "/contact",
+    bgImage: "bg-[url('/images/image3.webp')]",
+    breadcrumb: "Privacy Policy"
 }

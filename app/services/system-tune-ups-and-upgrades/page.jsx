@@ -17,9 +17,9 @@ const SystemTuneUpsAndUpgrades = () => {
         <>
             <SubpageHero content={SystemUpgradesHeroContent}/>
             <TextAndImageSection content={SystemUpgradesSection1}/>
-            <TextAndImageSection content={SystemUpgradesSection2} imageLeft={true}/>
+            <TextAndImageSection bgColor="bg-section-bg" content={SystemUpgradesSection2} imageLeft={true}/>
             <TextAndImageSection content={SystemUpgradesSection3}/>
-            <Faqs bgColor='bg-white' content={SystemUpgradesFaqsContent} />
+            <Faqs bgColor="bg-section-bg" content={SystemUpgradesFaqsContent} />
             <FinalCta content={SystemUpgradesFinalCtaContent}/>
         </>
     );

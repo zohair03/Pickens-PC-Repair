@@ -33,7 +33,7 @@ const MobileMenu = ({ closeMenu, isClosing }) => {
         <div className="w-full">
           <div className="flex items-center justify-center gap-2">
             <Link
-              href="/"
+              href="/about"
               className="text-navbar-link hover:text-navbar-link-hover py-3 transition-colors"
             >
               ABOUT
@@ -74,7 +74,7 @@ const MobileMenu = ({ closeMenu, isClosing }) => {
         <div className="w-full">
           <div className="flex items-center justify-center gap-2">
             <Link
-              href="/"
+              href="/services"
               onClick={closeMenu}
               className="py-3 text-navbar-link hover:text-navbar-link-hover transition-colors"
             >
@@ -114,7 +114,7 @@ const MobileMenu = ({ closeMenu, isClosing }) => {
 
         {/* Gallery */}
         <Link
-          href="/"
+          href="/gallery"
           className="w-full text-center py-3 text-navbar-link hover:text-navbar-link-hover transition-colors"
         >
           GALLERY
@@ -122,7 +122,7 @@ const MobileMenu = ({ closeMenu, isClosing }) => {
 
         {/* Contact */}
         <Link
-          href="/"
+          href="/contact"
           className="w-full text-center py-3 text-navbar-link hover:text-navbar-link-hover transition-colors"
         >
           CONTACT

@@ -13,7 +13,7 @@ const Contact = () => {
         <>
             <SubpageHero content={ContactHeroContent} isCta2={false} isClickToCall={true}/>
             <ContactInfo />
-            <Faqs isButton={false} isImage={false} content={ContactFaqContent} />
+            <Faqs bgColor="bg-section-bg" isButton={false} isImage={false} content={ContactFaqContent} />
         </>
     );
 };

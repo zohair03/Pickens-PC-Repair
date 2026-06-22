@@ -17,9 +17,9 @@ const DataBackupAndRecovery = () => {
         <>
             <SubpageHero content={DataRecoveryBackupHeroContent}/>
             <TextAndImageSection content={DataRecoveryBackupSection1}/>
-            <TextAndImageSection content={DataRecoveryBackupSection2} imageLeft={true}/>
+            <TextAndImageSection bgColor="bg-section-bg" content={DataRecoveryBackupSection2} imageLeft={true}/>
             <TextAndImageSection content={DataRecoveryBackupSection3}/>
-            <Faqs bgColor='bg-white' content={DataRecoveryBackupFaqsContent} />
+            <Faqs bgColor="bg-section-bg" content={DataRecoveryBackupFaqsContent} />
             <FinalCta content={DataRecoveryBackupFinalCtaContent}/>
         </>
     );

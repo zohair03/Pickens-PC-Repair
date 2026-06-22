@@ -17,9 +17,9 @@ const ComputerNetworking = () => {
         <>
             <SubpageHero content={ComputerNetworkHeroContent}/>
             <TextAndImageSection content={ComputerNetworkSection1}/>
-            <TextAndImageSection content={ComputerNetworkSection2} imageLeft={true}/>
+            <TextAndImageSection bgColor="bg-section-bg" content={ComputerNetworkSection2} imageLeft={true}/>
             <TextAndImageSection content={ComputerNetworkSection3}/>
-            <Faqs bgColor='bg-white' content={ComputerNetworkFaqsContent} />
+            <Faqs bgColor="bg-section-bg" content={ComputerNetworkFaqsContent} />
             <FinalCta content={ComputerNetworkFinalCtaContent}/>
         </>
     );

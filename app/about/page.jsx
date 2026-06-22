@@ -14,7 +14,7 @@ const AboutUs = () => {
         <>
             <SubpageHero content={Abouthero}/>
             <TextAndImageSection content={AboutSection1}/>
-            <TextAndImageSection content={AboutSection2} imageLeft={true}/>
+            <TextAndImageSection bgColor="bg-section-bg" content={AboutSection2} imageLeft={true}/>
         </>
     );
 };

@@ -413,6 +413,7 @@
   --color-topbar-text: #ffffff;
   --color-topbar-text-hover: #70C9F9;
   --color-topbar-icon: brightness(0) invert(1);
+  --color-topbar-icon-hover: brightness(0) saturate(100%) invert(68%) sepia(83%) saturate(1749%) hue-rotate(180deg) brightness(109%) contrast(103%);
   --color-topbar-menuicon: #ffffff;
 
   --color-navbar-link: #FFFFFF;
@@ -441,7 +442,7 @@
   --color-footer-bg: #010712;
   --color-footer-text: #E2E8F0;
 
-  --color-section-bg: #FFFFFF;
+  --color-section-bg: #ECF6FE;
   --color-section-bg-service: linear-gradient(to bottom, #FFFFFF, #E0F2FE);
   --color-section-bg-aboutus: linear-gradient(to bottom, #E0F2FE, #FFFFFF);
   --color-section-bg-testimonials: linear-gradient(to bottom, #F0F9FF, #E0F2FE);

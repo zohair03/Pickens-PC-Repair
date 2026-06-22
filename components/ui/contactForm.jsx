@@ -109,7 +109,39 @@ const ContactForm = ({ isGlass = false }) => {
     setStatus({ type: "", message: "" });
 
     try {
-      console.log("Form Data Submitted:", formData);
+      const response = await fetch("/api/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setStatus({
+          type: "success",
+          message: "Message sent successfully! We'll get back to you soon.",
+        });
+        // Clear form after successful submission
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          message: "",
+        });
+
+        // Auto-clear success message after 5 seconds
+        setTimeout(() => {
+          setStatus({ type: "", message: "" });
+        }, 5000);
+      } else {
+        setStatus({
+          type: "error",
+          message: data.error || "Failed to send message. Please try again.",
+        });
+      }
     } catch (error) {
       console.error("Error submitting form:", error);
       setStatus({
@@ -128,22 +160,20 @@ const ContactForm = ({ isGlass = false }) => {
 
   const getInputErrorClasses = (fieldName) => {
     if (isGlass) return inputBaseClasses;
-    
+
     if (fieldName === "email") {
-      return `${inputBaseClasses} ${
-        status.type === "error" && !formData.email
+      return `${inputBaseClasses} ${status.type === "error" && !formData.email
           ? "border-red-400 focus:border-red-500 bg-red-50"
           : status.type === "error" && formData.email && !validateEmail(formData.email)
-          ? "border-red-400 focus:border-red-500 bg-red-50"
-          : "border-[#9aa1ad] focus:border-primary"
-      }`;
+            ? "border-red-400 focus:border-red-500 bg-red-50"
+            : "border-[#9aa1ad] focus:border-primary"
+        }`;
     }
-    
-    return `${inputBaseClasses} ${
-      status.type === "error" && !formData[fieldName]
+
+    return `${inputBaseClasses} ${status.type === "error" && !formData[fieldName]
         ? "border-red-400 focus:border-red-500 bg-red-50"
         : "border-[#9aa1ad] focus:border-primary"
-    }`;
+      }`;
   };
 
   return (
@@ -151,15 +181,14 @@ const ContactForm = ({ isGlass = false }) => {
       {/* Status Message */}
       {status.message && (
         <div
-          className={`flex items-center gap-3 p-4 rounded-lg border-l-4 animate-slideIn ${
-            isGlass
+          className={`flex items-center gap-3 p-4 rounded-lg border-l-4 animate-slideIn ${isGlass
               ? status.type === "success"
                 ? "bg-green-500/20 border-green-400 text-green-300"
                 : "bg-red-500/20 border-red-400 text-red-300"
               : status.type === "success"
-              ? "bg-green-50 border-green-500 text-green-800"
-              : "bg-red-50 border-red-500 text-red-800"
-          }`}
+                ? "bg-green-50 border-green-500 text-green-800"
+                : "bg-red-50 border-red-500 text-red-800"
+            }`}
         >
           {status.type === "success" ? <SuccessIcon /> : <ErrorIcon />}
           <span className="font-medium text-sm md:text-base">{status.message}</span>

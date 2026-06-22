@@ -17,9 +17,9 @@ const PCAndMacRepairs = () => {
         <>
             <SubpageHero content={PCMacRepairsHeroContent}/>
             <TextAndImageSection content={PCMacRepairsSection1}/>
-            <TextAndImageSection content={PCMacRepairsSection2} imageLeft={true}/>
+            <TextAndImageSection bgColor="bg-section-bg" content={PCMacRepairsSection2} imageLeft={true}/>
             <TextAndImageSection content={PCMacRepairsSection3}/>
-            <Faqs bgColor='bg-white' content={PCMacRepairsFaqsContent} />
+            <Faqs bgColor="bg-section-bg" content={PCMacRepairsFaqsContent} />
             <FinalCta content={PCMacRepairsFinalCtaContent}/>
         </>
     );
