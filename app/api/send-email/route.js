@@ -11,7 +11,6 @@ export async function POST(request) {
   try {
     const { name, email, phone, message } = await request.json();
 
-    // Validate required fields
     if (!name || !email || !phone || !message) {
       return Response.json(
         { error: "All fields are required" },
