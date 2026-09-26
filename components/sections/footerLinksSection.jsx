@@ -3,6 +3,13 @@ import Image from "next/image";
 import CallButton from "../ui/buttons/callButton";
 import BusinessInfo from "@/cms/business Info/businessInfo";
 
+
+const FoxframeWebLogo = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" fill="#CECDCD" viewBox="0 0 631 477" height="24px" width="24px" >
+    <path d="M 94.50,378.25 L 79.75,384.75 L 61.00,397.50 L 46.75,408.75 L 20.50,433.75 L 9.75,446.75 L 14.50,447.50 L 64.25,447.75 L 69.75,428.50 L 75.00,414.25 L 82.50,398.25 Z M 443.75,296.50 L 444.00,296.50 L 444.25,296.25 L 445.00,296.25 L 445.25,296.50 L 446.00,296.50 L 446.25,296.75 L 447.50,296.75 L 447.75,297.00 L 448.25,297.00 L 448.50,297.25 L 449.25,297.25 L 449.50,297.50 L 450.75,297.75 L 451.00,298.00 L 452.25,298.50 L 453.50,299.50 L 453.75,299.50 L 454.75,300.50 L 455.00,300.50 L 456.25,302.00 L 456.25,302.25 L 456.50,302.50 L 456.50,303.50 L 456.25,303.75 L 456.25,304.25 L 456.00,304.50 L 455.50,305.75 L 454.75,306.50 L 454.50,307.25 L 454.00,307.75 L 453.75,307.75 L 453.50,308.00 L 453.50,308.25 L 453.25,308.50 L 453.00,308.50 L 452.00,309.50 L 451.50,309.50 L 450.75,310.00 L 448.75,310.00 L 448.50,309.75 L 448.25,309.75 L 445.75,307.25 L 445.75,307.00 L 445.25,306.50 L 445.25,306.25 L 444.50,305.00 L 444.50,304.50 L 443.75,303.25 L 443.75,301.50 L 443.50,301.25 L 443.50,299.00 L 443.25,298.75 L 443.25,297.50 L 443.50,297.25 L 443.50,296.75 Z M 389.75,279.50 L 391.75,282.75 L 406.00,297.50 L 416.50,311.00 L 424.25,317.00 L 432.50,320.25 L 474.25,326.50 L 473.25,323.50 L 462.00,305.50 L 456.25,297.50 L 450.75,293.00 L 427.00,286.50 Z M 614.75,354.25 L 528.50,310.50 L 504.00,245.25 L 384.75,181.00 L 305.75,66.25 L 197.00,201.75 L 147.75,279.25 L 160.75,279.50 L 71.75,364.25 L 150.50,343.00 L 105.50,399.50 L 83.00,470.00 L 110.25,448.00 L 185.25,448.50 L 275.75,350.50 L 202.50,360.25 L 225.00,328.75 L 284.50,277.25 L 357.75,248.25 L 331.50,232.00 L 301.00,153.50 L 279.50,205.50 L 280.00,251.25 L 256.25,260.50 L 260.50,191.00 L 304.00,108.25 L 388.00,246.00 L 471.25,272.75 L 499.75,331.25 L 562.00,357.50 L 575.75,380.00 L 537.50,406.75 L 429.00,376.50 L 352.00,376.50 L 309.25,396.25 L 337.75,403.50 L 285.25,449.50 L 351.75,450.00 L 401.00,419.50 L 456.25,409.75 L 530.00,417.50 L 491.50,447.25 L 574.25,409.50 Z M 506.50,63.50 L 453.50,93.50 L 381.00,140.50 L 392.75,161.00 L 442.50,182.75 L 437.25,172.25 L 423.00,161.75 L 441.25,139.50 L 470.50,112.00 L 445.50,181.75 L 447.75,186.25 L 467.25,197.75 Z" fillRule="evenodd"/>
+  </svg>
+);
+
 // Instagram Icon
 const InstagramIcon = () => (
   <svg
@@ -216,18 +223,22 @@ const FooterLinks = () => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="relative z-10 border-t border-white/10 px-6 sm:px-10 lg:px-16 py-6 flex flex-col items-center gap-2 text-center">
-        <p className="text-white/70 text-xs sm:text-sm">
+      <div className="xl:w-full relative z-10 border-t border-white/10 px-6 sm:px-10 lg:px-16 py-6 flex flex-col xl:flex-row items-center xl:justify-between gap-2 text-center">
+        <div className="flex flex-wrap justify-center gap-2 sm:gap-4 text-xs sm:text-sm text-footer-text mt-1">
+          <Link href={"/privacy-policy"} className="hover:text-footer-text-hover transition-colors">
+            Privacy Policy
+          </Link>
+          <Link href={"/privacy-policy"} className="hover:text-footer-text-hover transition-colors">
+            Do Not Sell/Share My Personal Information
+          </Link>
+        </div>
+        <p className="text-footer-text text-xs sm:text-sm">
           © 2026 &nbsp; The content on this website is owned by us and our
           licensors
         </p>
-        <div className="flex flex-wrap justify-center gap-2 sm:gap-4 text-xs sm:text-sm text-white/70">
-          <Link href="/privacy-policy" className="hover:text-footer-form-text-hover transition-colors">
-            Privacy Policy
-          </Link>
-          <Link href="/privacy-policy" className="hover:text-footer-form-text-hover transition-colors">
-            Do Not Sell/Share My Personal Information
-          </Link>
+        <div className="mt-2 xl:mt-0 flex gap-2 justify-center align-middle items-center">
+          <FoxframeWebLogo/>
+          <p className="text-xs sm:text-sm font-semibold text-white/80">Built by <Link href={"https://www.instagram.com/foxframe.web/"} target="_blank" className="underline underline-offset-3 decoration-white/40 hover:text-white hover:decoration-white/90  transition-colors duration-300 delay-150 ">Foxframe Web</Link></p>
         </div>
       </div>
     </footer>
